@@ -1,7 +1,20 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
+#    Updated: 2022/12/23 13:21:59 by dbrandao         ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 SRC			=	push_swap.c \
 				die.c \
 				check_numbers.c \
 				error_management.c \
+				check_duplicated_values.c \
 				
 
 OBJS_DIR			=	objects
