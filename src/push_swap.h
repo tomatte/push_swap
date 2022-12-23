@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/23 13:22:28 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/23 14:08:07 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	error_management(int argc, char **argv);
 void	die(void);
 void	check_numbers(int argc, char **argv);
 void	check_duplicated_values(int argc, char **argv);
+void	check_numbers_size(int argc, char **argv);
 
 
 #endif
