@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/24 13:06:57 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/24 13:30:12 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,13 @@ static void	print_lst(t_lst *lst)
 	}
 }
 
+/* static void	print_node(t_lst *node)
+{
+	if (!node)
+		ft_printf("NULL\n");
+	ft_printf("node: %d\n", node->num);
+} */
+
 int	main(int argc, char *argv[])
 {
 	t_lst	*node;
@@ -30,7 +37,9 @@ int	main(int argc, char *argv[])
 	node = lst_new(10);
 	lst_unshift(node, lst_new(9));
 	lst_unshift(node, lst_new(8));
+	//print_lst(node);
+	lst_push(node, lst_new(99));
+	lst_push(node, lst_new(1));
 	print_lst(node);
-
 	return (0);
 }
