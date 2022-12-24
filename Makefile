@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2022/12/24 13:28:49 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/12/24 19:26:15 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,6 +22,7 @@ SRC			=	push_swap.c \
 				lst_unshift.c \
 				lst_last.c \
 				lst_push.c \
+				lst_shift.c \
 				
 				
 

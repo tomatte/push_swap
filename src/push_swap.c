@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/24 13:30:12 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/24 19:25:48 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ static void	print_lst(t_lst *lst)
 int	main(int argc, char *argv[])
 {
 	t_lst	*node;
+	t_lst	*aux;
 	error_management(argc, argv);
 
 	node = lst_new(10);
@@ -41,5 +42,10 @@ int	main(int argc, char *argv[])
 	lst_push(node, lst_new(99));
 	lst_push(node, lst_new(1));
 	print_lst(node);
+	ft_printf("\n\n");
+	aux = lst_shift(node);
+	print_lst(node);
+	ft_printf("removed: %d\n", aux->num);
+	
 	return (0);
 }
