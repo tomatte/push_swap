@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2022/12/23 14:08:23 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/12/24 12:34:27 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,6 +16,8 @@ SRC			=	push_swap.c \
 				error_management.c \
 				check_duplicated_values.c \
 				check_numbers_size.c \
+				new_node.c \
+				lst_size.c \
 				
 
 OBJS_DIR			=	objects
@@ -30,6 +32,7 @@ CFLAGS		=	-I./ -Wall -Werror -Wextra
 
 VPATH				=	./src \
 						./src/error \
+						./src/list \
 
 
 CC					=	cc
