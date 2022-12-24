@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2022/12/24 13:06:33 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/12/24 13:18:04 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,7 +19,8 @@ SRC			=	push_swap.c \
 				lst_new.c \
 				lst_size.c \
 				lst_first.c \
-				lst_unshift.c
+				lst_unshift.c \
+				lst_last.c \
 				
 
 OBJS_DIR			=	objects
