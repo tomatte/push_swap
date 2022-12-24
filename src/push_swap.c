@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/24 19:25:48 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/24 19:37:32 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,10 @@ int	main(int argc, char *argv[])
 	aux = lst_shift(node);
 	print_lst(node);
 	ft_printf("removed: %d\n", aux->num);
-	
+	ft_printf("\npop:\n");
+	aux = lst_pop(node);
+	print_lst(node);
+	ft_printf("\n\n");
+	ft_printf("removed: %d\n", aux->num);
 	return (0);
 }
