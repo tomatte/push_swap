@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/26 15:19:47 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/26 15:29:32 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ void	check_numbers_size(int argc, char **argv);
 t_lst	*get_numbers(int argc, char **argv);
 
 //instructions
-void	sa(t_lst *lst);
+void	swap(t_lst *stack);
 
 #endif
