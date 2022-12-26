@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/24 19:51:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/26 14:50:17 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 
 static void	print_lst(t_lst *lst)
 {
+	if (!lst)
+		ft_printf("Empty List\n");
 	lst = lst_first(lst);
 	while (lst)
 	{
@@ -31,17 +33,13 @@ static void	print_lst(t_lst *lst)
 
 int	main(int argc, char *argv[])
 {
-	t_lst	*node;
-	//t_lst	*aux;
-	error_management(argc, argv);
+	t_lst	*stack_a;
+	t_lst	*stack_b;
 
-	node = lst_new(10);
-	lst_unshift(node, lst_new(9));
-	lst_unshift(node, lst_new(8));
-	//print_lst(node);
-	lst_push(node, lst_new(99));
-	lst_push(node, lst_new(1));
-	print_lst(node);
-	lst_clear(node);
+	error_management(argc, argv);
+	stack_a = get_numbers(argc, argv);
+	stack_b = NULL;
+	(void) stack_b;
+	print_lst(stack_a);
 	return (0);
 }
