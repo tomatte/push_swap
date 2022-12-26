@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/26 14:38:31 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/26 14:43:13 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ typedef struct	s_lst
 t_lst	*lst_new(int num);
 int		lst_size(t_lst *lst);
 t_lst	*lst_first(t_lst *lst);
-void	lst_unshift(t_lst *lst, t_lst *node);
+void	lst_unshift(t_lst **lst, t_lst *node);
 t_lst	*lst_last(t_lst *lst);
 void	lst_push(t_lst **lst, t_lst *node);
 t_lst	*lst_shift(t_lst *lst);
