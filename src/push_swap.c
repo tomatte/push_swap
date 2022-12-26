@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/26 14:50:17 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/26 15:20:52 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,9 @@ int	main(int argc, char *argv[])
 	stack_a = get_numbers(argc, argv);
 	stack_b = NULL;
 	(void) stack_b;
+	print_lst(stack_a);
+	ft_printf("\n\n");
+	sa(stack_a);
 	print_lst(stack_a);
 	return (0);
 }
