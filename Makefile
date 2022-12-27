@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2022/12/26 15:38:15 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/12/27 09:52:13 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ SRC			=	push_swap.c \
 				get_numbers.c \
 				swap.c \
 				ss.c \
+				push.c \
 				
 
 OBJS_DIR			=	objects

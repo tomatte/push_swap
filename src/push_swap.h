@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/26 15:38:08 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/27 10:18:42 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ t_lst	*lst_first(t_lst *lst);
 void	lst_unshift(t_lst **lst, t_lst *node);
 t_lst	*lst_last(t_lst *lst);
 void	lst_push(t_lst **lst, t_lst *node);
-t_lst	*lst_shift(t_lst *lst);
+t_lst	*lst_shift(t_lst **lst);
 t_lst	*lst_pop(t_lst *lst);
 void	lst_clear(t_lst *lst);
 
@@ -46,5 +46,6 @@ t_lst	*get_numbers(int argc, char **argv);
 //instructions
 void	swap(t_lst *stack);
 void	ss(t_lst *a, t_lst *b);
+void	push(t_lst **src, t_lst **dst);
 
 #endif
