@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/27 11:04:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/30 10:06:27 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,5 +48,6 @@ t_lst	*get_numbers(int argc, char **argv);
 void	swap(t_lst *stack);
 void	ss(t_lst *a, t_lst *b);
 void	push(t_lst **src, t_lst **dst);
+void	rr(t_lst *stack1, t_lst *stack2);
 
 #endif
