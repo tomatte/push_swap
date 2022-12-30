@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/27 10:18:42 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/27 11:04:27 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,7 @@ void	lst_push(t_lst **lst, t_lst *node);
 t_lst	*lst_shift(t_lst **lst);
 t_lst	*lst_pop(t_lst *lst);
 void	lst_clear(t_lst *lst);
+void	rotate(t_lst *stack);
 
 //error
 void	error_management(int argc, char **argv);

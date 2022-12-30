@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/27 10:42:44 by dbrandao         ###   ########.fr       */
+/*   Updated: 2022/12/27 11:06:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ int	main(int argc, char *argv[])
 	print_lst(stack_b);
 	ft_printf("\n\n");
 
-	push(&stack_a, &stack_b);
+	rotate(stack_a);
 
 	ft_printf("stack_a:\n");
 	print_lst(stack_a);
@@ -55,45 +55,5 @@ int	main(int argc, char *argv[])
 	print_lst(stack_b);
 	ft_printf("\n\n");
 
-	push(&stack_a, &stack_b);
-
-	ft_printf("stack_a:\n");
-	print_lst(stack_a);
-	ft_printf("stack_b:\n");
-	print_lst(stack_b);
-	ft_printf("\n\n");
-
-	push(&stack_a, &stack_b);
-
-	ft_printf("stack_a:\n");
-	print_lst(stack_a);
-	ft_printf("stack_b:\n");
-	print_lst(stack_b);
-	ft_printf("\n\n");
-
-	push(&stack_b, &stack_a);
-
-	ft_printf("stack_a:\n");
-	print_lst(stack_a);
-	ft_printf("stack_b:\n");
-	print_lst(stack_b);
-	ft_printf("\n\n");
-
-	push(&stack_b, &stack_a);
-
-	ft_printf("stack_a:\n");
-	print_lst(stack_a);
-	ft_printf("stack_b:\n");
-	print_lst(stack_b);
-	ft_printf("\n\n");
-
-
-	push(&stack_b, &stack_a);
-
-	ft_printf("stack_a:\n");
-	print_lst(stack_a);
-	ft_printf("stack_b:\n");
-	print_lst(stack_b);
-	ft_printf("\n\n");
 	return (0);
 }

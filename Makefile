@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2022/12/27 09:52:13 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/12/30 09:29:37 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,6 +29,7 @@ SRC			=	push_swap.c \
 				swap.c \
 				ss.c \
 				push.c \
+				rotate.c \
 				
 
 OBJS_DIR			=	objects
@@ -39,7 +40,7 @@ NAME		=	push_swap
 
 LIBFT		=	./libft/libftprintf.a
 
-CFLAGS		=	-I./ -Wall -Werror -Wextra
+CFLAGS		=	-g -I./ -Wall -Werror -Wextra
 
 VPATH				=	./src \
 						./src/error \
