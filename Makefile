@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2022/12/30 10:16:57 by dbrandao         ###   ########.fr        #
+#    Updated: 2022/12/30 10:24:44 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,6 +32,7 @@ SRC			=	push_swap.c \
 				rotate.c \
 				rr.c \
 				rrotate.c \
+				rrr.c \
 				
 
 OBJS_DIR			=	objects
