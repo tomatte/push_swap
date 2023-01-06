@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/06 11:43:13 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/06 13:41:56 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ static void	print_lst(t_lst *lst)
 	lst = lst_first(lst);
 	while (lst)
 	{
-		ft_printf("%d\n", lst->num);
+		ft_printf("num: %d\tpos: %d\n", lst->num, lst->final_position);
 		lst = lst->next;
 	}
 }
@@ -45,9 +45,9 @@ int	main(int argc, char *argv[])
 	error_management(argc, argv);
 	stack_a = get_numbers(argc, argv);
 	stack_b = NULL;
+	fill_lst_position(stack_a);
 	print_lst(stack_a);
 	print_lst(stack_b);
-	fill_lst_position(stack_a);
 	clear_stacks(stack_a, stack_b);
 	return (0);
 }

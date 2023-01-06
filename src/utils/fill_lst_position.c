@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:05:02 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/06 13:08:47 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/06 13:46:10 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static int	*get_lst_numbers(t_lst *lst)
+static int	*lst_to_int_array(t_lst *lst)
 {
 	int	*numbers;
 	int	size;
@@ -33,19 +33,6 @@ static int	*get_lst_numbers(t_lst *lst)
 		i++;
 	}
 	return (numbers);
-}
-
-static void	print_ints(int *nums, int size)
-{
-	int	i;
-
-	i = 0;
-	while (i < size)
-	{
-		ft_printf("%d\t", nums[i]);
-		i++;
-	}
-	ft_printf("\n");
 }
 
 static void	sort_ints(int *numbers[], int size)
@@ -74,23 +61,28 @@ static void	sort_ints(int *numbers[], int size)
 	}
 }
 
-/* static void	set_position(int *numbers, t_lst *lst)
+static void	set_positions(int *numbers, t_lst *lst)
 {
-	
-} */
+	int	size;
+	int	i;
+
+	size = lst_size(lst);
+	i = 0;
+	while (i < size)
+	{
+		lst = lst_find(lst, numbers[i]);
+		lst->final_position = i;
+		i++;
+	}
+}
 
 void	fill_lst_position(t_lst *lst)
 {
 	int	*numbers;
 	int	size;
 
-	numbers = get_lst_numbers(lst);
+	numbers = lst_to_int_array(lst);
 	size = lst_size(lst);
 	sort_ints(&numbers, size);
-	print_ints(numbers, size);
+	set_positions(numbers, lst);
 }
-
-/* 
-	create a lst_find function
-	use it to fill position fild of each item
- */
