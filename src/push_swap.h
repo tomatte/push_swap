@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/06 11:22:57 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/06 13:25:53 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@
 typedef struct	s_lst
 {
 	int				num;
-	int				right_position;
-	int				actual_position;
+	int				current_position;
+	int				final_position;
 	struct s_lst	*next;
 	struct s_lst	*prev;
 }	t_lst;
@@ -34,6 +34,7 @@ t_lst	*lst_shift(t_lst **lst);
 t_lst	*lst_pop(t_lst *lst);
 void	lst_clear(t_lst *lst);
 void	rotate(t_lst *stack);
+t_lst	*lst_find(t_lst *lst, int num);
 
 //error
 void	error_management(int argc, char **argv);
