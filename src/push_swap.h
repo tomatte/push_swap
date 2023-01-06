@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/30 10:24:37 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/06 11:22:57 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@
 typedef struct	s_lst
 {
 	int				num;
+	int				right_position;
+	int				actual_position;
 	struct s_lst	*next;
 	struct s_lst	*prev;
 }	t_lst;
@@ -43,6 +45,7 @@ void	check_numbers_size(int argc, char **argv);
 
 //utils
 t_lst	*get_numbers(int argc, char **argv);
+void	fill_lst_position(t_lst *lst);
 
 //instructions
 void	swap(t_lst *stack);
