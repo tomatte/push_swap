@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:19:03 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 08:15:51 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/07 10:59:38 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,18 @@
 
 void	put_above(t_lst **a, t_lst **b, int pos)
 {
-	(void) b;
 	while (lst_first(*a)->position != pos)
 	{
-		rotate(*a);
-		ft_printf("RA\n");
+		ra(*a);
 	}
 	*a = lst_first(*a);
-	push(a, b);
-	ft_printf("PB\n");
+	pb(a, b);
 	while (lst_first(*a)->position != pos + 1)
 	{
-		rotate(*a);
-		ft_printf("RA\n");
+		ra(*a);
 	}
 	*a = lst_first(*a);
-	push(b, a);
-	ft_printf("PA\n");
+	pa(b, a);
 }
 
 /* 

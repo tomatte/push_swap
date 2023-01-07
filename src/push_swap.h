@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 11:04:49 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/07 15:05:53 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ void	pb(t_lst **a, t_lst **b);
 //algo
 void	sort(t_lst *a);
 void	put_above(t_lst **a, t_lst **b, int pos);
-void	until_four(t_lst **a, t_lst **b);
+void	two(t_lst *a);
+void	three(t_lst *a);
 
 //temp
 void	print_lst(t_lst *lst);

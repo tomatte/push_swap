@@ -1,46 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   three.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 18:08:36 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 15:09:20 by dbrandao         ###   ########.fr       */
+/*   Created: 2023/01/07 08:35:10 by dbrandao          #+#    #+#             */
+/*   Updated: 2023/01/07 15:06:20 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	simple_solver(t_lst **a, t_lst **b)
+void	three(t_lst *a)
 {
-	int	pos;
-
-	pos = lst_size(*a) - 2;
-	while (pos >= 0)
+	a = lst_first(a);
+	if (a->position == 0 && a->next->position == 2)
 	{
-		put_above(a, b, pos);
-		pos--;
+		rra(a);
+		sa(a);
 	}
-}
-
-void	sort(t_lst *a)
-{
-	t_lst	*b;
-	int		size;
-
-	b = NULL;
-	size = lst_size(a);
-	switch (size)
+	else if (a->position == 1 && a->next->position == 0)
+		sa(a);
+	else if (a->position == 1 && a->next->position == 2)
+		rra(a);
+	else if (a->position == 2 && a->next->position == 0)
+		ra(a);
+	else if (a->position == 2 && a->next->position == 1)
 	{
-		case 2:
-			two(a);
-			break ;
-		case 3:
-			three(a);
-			break ;
-		default :
-			simple_solver(&a, &b);
+		ra(a);
+		sa(a);
 	}
-	print_lst(a);
 }
