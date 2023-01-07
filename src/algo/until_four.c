@@ -1,39 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   sort.c                                             :+:      :+:    :+:   */
+/*   until_four.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/06 18:08:36 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 09:50:58 by dbrandao         ###   ########.fr       */
+/*   Created: 2023/01/07 08:35:10 by dbrandao          #+#    #+#             */
+/*   Updated: 2023/01/07 09:54:50 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-static void	simple_solver(t_lst **a, t_lst **b)
+static void	two(t_lst *a)
 {
-	int	pos;
-
-	pos = lst_size(*a) - 2;
-	while (pos >= 0)
-	{
-		put_above(a, b, pos);
-		pos--;
-	}
+	a = lst_first(a);
+	if (a->position == 0)
+		return ;
+	swap(a);
+	ft_printf("SA\n");
 }
 
-void	sort(t_lst *a)
+void	until_four(t_lst **a, t_lst **b)
 {
-	t_lst	*b;
-	int		size;
+	int	size;
 
-	b = NULL;
-	size = lst_size(a);
-	if (size <= 4)
-		until_four(&a, &b);
-	else
-		simple_solver(&a, &b);
-	print_lst(a);
+	(void) b;
+	size = lst_size(*a);
+	switch (size)
+	{
+		case 2:
+			two(*a);
+			break;
+		default :
+			return ;
+	}
 }
