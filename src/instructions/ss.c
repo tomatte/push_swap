@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 15:32:42 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/26 15:33:46 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/07 10:27:33 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,4 +16,5 @@ void	ss(t_lst *a, t_lst *b)
 {
 	swap(a);
 	swap(b);
+	ft_printf("ss\n");
 }

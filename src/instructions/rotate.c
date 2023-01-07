@@ -6,11 +6,21 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 10:45:54 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/30 09:51:37 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/07 10:36:36 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
+
+void	ra(void)
+{
+	ft_printf("ra\n");
+}
+
+void	rb(void)
+{
+	ft_printf("rb\n");
+}
 
 void	rotate(t_lst *stack)
 {
