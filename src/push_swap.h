@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 09:54:15 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/07 11:04:49 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ void	lst_push(t_lst **lst, t_lst *node);
 t_lst	*lst_shift(t_lst **lst);
 t_lst	*lst_pop(t_lst *lst);
 void	lst_clear(t_lst *lst);
-void	rotate(t_lst *stack);
 t_lst	*lst_find(t_lst *lst, int num);
 
 //error
@@ -49,11 +48,19 @@ void	fill_lst_position(t_lst *lst);
 
 //instructions
 void	swap(t_lst *stack);
+void	rotate(t_lst *stack);
 void	ss(t_lst *a, t_lst *b);
-void	push(t_lst **src, t_lst **dst);
 void	rr(t_lst *stack1, t_lst *stack2);
 void	rrotate(t_lst *stack);
 void	rrr(t_lst *stack1, t_lst *stack2);
+void	rra(t_lst *a);
+void	rrb(t_lst *b);
+void	ra(t_lst *a);
+void	rb(t_lst *b);
+void	sa(t_lst *a);
+void	sb(t_lst *b);
+void	pa(t_lst **b, t_lst **a);
+void	pb(t_lst **a, t_lst **b);
 
 //algo
 void	sort(t_lst *a);

@@ -6,21 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/27 10:45:54 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 10:36:36 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/07 11:04:00 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
-
-void	ra(void)
-{
-	ft_printf("ra\n");
-}
-
-void	rb(void)
-{
-	ft_printf("rb\n");
-}
 
 void	rotate(t_lst *stack)
 {
@@ -41,4 +31,16 @@ void	rotate(t_lst *stack)
 	stack->prev = aux;
 	stack->next->prev = NULL;
 	stack->next = NULL;
+}
+
+void	ra(t_lst *a)
+{
+	rotate(a);
+	ft_printf("ra\n");
+}
+
+void	rb(t_lst *b)
+{
+	rotate(b);
+	ft_printf("rb\n");
 }
