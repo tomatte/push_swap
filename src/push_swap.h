@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/08 14:40:52 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/08 15:20:24 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	check_numbers_size(int argc, char **argv);
 t_lst	*get_numbers(int argc, char **argv);
 void	fill_lst_index(t_lst *lst);
 int		get_position(t_lst *lst, int index);
+t_lst	*find_by_index(t_lst *stack, int index);
 
 //instructions
 void	swap(t_lst *stack);
@@ -68,6 +69,7 @@ void	sort(t_lst *a);
 void	put_above(t_lst **a, t_lst **b, int pos);
 void	two(t_lst *a);
 void	three(t_lst *a);
+void	double_solving(t_lst **a, t_lst **b);
 
 //temp
 void	print_lst(t_lst *lst);
