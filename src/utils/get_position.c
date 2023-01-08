@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   three.c                                            :+:      :+:    :+:   */
+/*   get_position.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/07 08:35:10 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/08 14:36:37 by dbrandao         ###   ########.fr       */
+/*   Created: 2023/01/08 14:30:44 by dbrandao          #+#    #+#             */
+/*   Updated: 2023/01/08 14:42:12 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void	three(t_lst *a)
+int	get_position(t_lst *lst, int index)
 {
-	a = lst_first(a);
-	if (a->index == 0 && a->next->index == 2)
+	int	i;
+
+	i = 0;
+	lst = lst_first(lst);
+	while (lst)
 	{
-		rra(a);
-		sa(a);
+		if (lst->index == index)
+			return (i);
+		i++;
+		lst = lst->next;
 	}
-	else if (a->index == 1 && a->next->index == 0)
-		sa(a);
-	else if (a->index == 1 && a->next->index == 2)
-		rra(a);
-	else if (a->index == 2 && a->next->index == 0)
-		ra(a);
-	else if (a->index == 2 && a->next->index == 1)
-	{
-		ra(a);
-		sa(a);
-	}
+	return (-1);
 }

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/07 14:54:49 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/07 14:56:03 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/08 14:40:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 void	two(t_lst *a)
 {
 	a = lst_first(a);
-	if (a->position == 0)
+	if (a->index == 0)
 		return ;
 	sa(a);
 }

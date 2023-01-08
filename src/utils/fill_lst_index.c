@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:05:02 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/06 18:48:14 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/08 14:38:16 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,7 +61,7 @@ static void	sort_ints(int *numbers[], int size)
 	}
 }
 
-static void	set_positions(int *numbers, t_lst *lst)
+static void	set_index(int *numbers, t_lst *lst)
 {
 	int	size;
 	int	i;
@@ -71,12 +71,12 @@ static void	set_positions(int *numbers, t_lst *lst)
 	while (i < size)
 	{
 		lst = lst_find(lst, numbers[i]);
-		lst->position = i;
+		lst->index = i;
 		i++;
 	}
 }
 
-void	fill_lst_position(t_lst *lst)
+void	fill_lst_index(t_lst *lst)
 {
 	int	*numbers;
 	int	size;
@@ -88,5 +88,5 @@ void	fill_lst_position(t_lst *lst)
 		return ;
 	size = lst_size(lst);
 	sort_ints(&numbers, size);
-	set_positions(numbers, lst);
+	set_index(numbers, lst);
 }
