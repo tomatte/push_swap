@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/17 14:33:01 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/17 14:40:54 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -60,6 +60,8 @@ VPATH				=	./src \
 						./src/utils \
 						./src/instructions \
 						./src/algo \
+						./src/algo/simple_solver \
+						
 
 
 CC					=	cc

@@ -6,11 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:19:03 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/08 14:36:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/17 14:41:19 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
 void	put_above(t_lst **a, t_lst **b, int pos)
 {
