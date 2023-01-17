@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/08 14:39:30 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/17 14:33:01 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,8 +38,9 @@ SRC			=	push_swap.c \
 				sort.c \
 				put_above.c \
 				print_lst.c \
-				two.c \
-				three.c \
+				two_solver.c \
+				three_solver.c \
+				simple_solver.c \
 				get_position.c \
 				
 
