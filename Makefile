@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/17 18:52:14 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/17 18:54:37 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,6 +45,7 @@ SRC			=	push_swap.c \
 				twister_move.c \
 				swap_and_move.c \
 				move_to_top.c \
+				find_by_index.c \
 				
 
 OBJS_DIR			=	objects
