@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/08 15:20:31 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/17 14:25:05 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,7 +53,7 @@ NAME		=	push_swap
 
 LIBFT		=	./libft/libftprintf.a
 
-CFLAGS		=	-g -I./ -Wall -Werror -Wextra
+CFLAGS		=	-g -I./ -Wall -Wextra
 
 VPATH				=	./src \
 						./src/error \

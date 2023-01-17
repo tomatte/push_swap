@@ -6,11 +6,30 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/08 15:50:36 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/09 08:18:24 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "push_swap.h"
+
+/* static void	twister_move(t_lst *stack)
+{
+	stack = lst_first(stack);
+	while (stack->next->index != stack->index + 1)
+	{
+		sa(stack);
+		ra(stack);
+		//print_lst(stack);
+	}
+}
+
+static void	instruc_test(t_lst *stack)
+{
+	sa(stack);
+	ra(stack);
+	twister_move(stack);
+	//print_lst(stack);
+} */
 
 int	main(int argc, char *argv[])
 {
@@ -19,6 +38,7 @@ int	main(int argc, char *argv[])
 	error_management(argc, argv);
 	stack_a = get_numbers(argc, argv);
 	fill_lst_index(stack_a);
+	//instruc_test(stack_a);
 	sort(stack_a);
 	//lst_clear(stack_a);
 	return (0);
