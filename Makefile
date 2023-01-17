@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/17 14:40:54 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/17 18:52:14 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,9 @@ SRC			=	push_swap.c \
 				three_solver.c \
 				simple_solver.c \
 				get_position.c \
+				twister_move.c \
+				swap_and_move.c \
+				move_to_top.c \
 				
 
 OBJS_DIR			=	objects
@@ -61,6 +64,7 @@ VPATH				=	./src \
 						./src/instructions \
 						./src/algo \
 						./src/algo/simple_solver \
+						./src/algo/double_solving \
 						
 
 

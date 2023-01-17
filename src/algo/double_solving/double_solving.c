@@ -6,33 +6,14 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/08 14:03:21 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/08 14:34:24 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:48:40 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
-
-/* void	swap_and_move(t_lst *stack)
-{
-	int	size;
-
-	size = lst_size(stack);
-	
-}
+#include "../../push_swap.h"
 
 void	double_solving(t_lst **a, t_lst **b)
 {
-
+	(void) b;
+	swap_and_move(*a);
 }
- */
-/*
-
-
-3
-5
-2
-1
-4
-
-
- */

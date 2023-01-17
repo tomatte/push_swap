@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/17 14:34:02 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/17 18:50:23 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,11 @@ void	put_above(t_lst **a, t_lst **b, int pos);
 void	two_solver(t_lst *a);
 void	three_solver(t_lst *a);
 void	simple_solver(t_lst **a, t_lst **b);
+
+//double_solving
+void	swap_and_move(t_lst *stack);
+void	twister_move(t_lst **s);
+void	move_to_top(t_lst *stack, int index);
 
 //temp
 void	print_lst(t_lst *lst);
