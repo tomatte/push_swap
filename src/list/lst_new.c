@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 12:22:34 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/24 13:02:11 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:13:39 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,6 @@ t_lst	*lst_new(int num)
 	node->prev = NULL;
 	node->next = NULL;
 	node->num = num;
+	node->index = -1;
 	return (node);
 }

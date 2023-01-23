@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 13:13:58 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/26 14:35:38 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:18:50 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 //add node to the end of list
 void	lst_push(t_lst **lst, t_lst *node)
 {
-	if (!lst || !node)
+	if (lst == NULL || node == NULL)
 		return ;
-	if (!*lst)
+	if (*lst == NULL)
 	{
 		*lst = node;
 		return ;

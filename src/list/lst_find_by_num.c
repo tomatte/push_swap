@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   find_by_index.c                                    :+:      :+:    :+:   */
+/*   lst_find_by_num.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/17 18:54:00 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/17 18:54:46 by dbrandao         ###   ########.fr       */
+/*   Created: 2023/01/06 13:13:35 by dbrandao          #+#    #+#             */
+/*   Updated: 2023/01/23 19:12:16 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-t_lst	*find_by_index(t_lst *stack, int index)
+t_lst	*lst_find_by_num(t_lst *lst, int num)
 {
-	stack = lst_first(stack);
-	while (stack)
+	lst = lst_first(lst);
+	while (lst)
 	{
-		if (stack->index == index)
-			return (stack);
-		stack = stack->next;
+		if (lst->num == num)
+			return (lst);
+		lst = lst->next;
 	}
 	return (NULL);
 }

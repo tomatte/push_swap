@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/17 18:54:37 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/23 19:35:47 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,33 +19,24 @@ SRC			=	push_swap.c \
 				lst_new.c \
 				lst_size.c \
 				lst_first.c \
-				lst_unshift.c \
 				lst_last.c \
 				lst_push.c \
-				lst_shift.c \
-				lst_pop.c \
 				lst_clear.c \
 				get_numbers.c \
-				swap.c \
-				ss.c \
-				push.c \
-				rotate.c \
-				rr.c \
-				rrotate.c \
-				rrr.c \
 				fill_lst_index.c \
-				lst_find.c \
-				sort.c \
-				put_above.c \
+				lst_find_by_num.c \
+				lst_find_by_index.c \
 				print_lst.c \
+				get_position.c \
+				#sort.c \
+				put_above.c \
 				two_solver.c \
 				three_solver.c \
 				simple_solver.c \
-				get_position.c \
 				twister_move.c \
 				swap_and_move.c \
 				move_to_top.c \
-				find_by_index.c \
+
 				
 
 OBJS_DIR			=	objects

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   fill_lst_position.c                                :+:      :+:    :+:   */
+/*   fill_lst_index.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:05:02 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/08 14:38:16 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 19:37:48 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,7 +70,7 @@ static void	set_index(int *numbers, t_lst *lst)
 	i = 0;
 	while (i < size)
 	{
-		lst = lst_find(lst, numbers[i]);
+		lst = lst_find_by_num(lst, numbers[i]);
 		lst->index = i;
 		i++;
 	}
