@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/23 22:22:10 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 22:36:53 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,24 @@ t_lst	*get_numbers(int argc, char **argv);
 void	fill_lst_index(t_lst *lst);
 int		get_position(t_lst *lst, int index);
 
-//instructions
+//base instructions
 void	swap(t_lst **lst);
 void	push(t_lst **dest, t_lst **src);
 void	rotate(t_lst **lst);
 void	reverse_rotate(t_lst **lst);
+
+//printing instructions
+void	sa(t_lst **a);
+void	sb(t_lst **b);
+void	ss(t_lst **a, t_lst **b);
+void	pa(t_lst **a, t_lst **b);
+void	pb(t_lst **b, t_lst **a);
+void	ra(t_lst **a);
+void	rb(t_lst **b);
+void	rr(t_lst **a, t_lst **b);
+void	rra(t_lst **a);
+void	rrb(t_lst **b);
+void	rrr(t_lst **a, t_lst **b);
 
 //algo
 void	sort(t_lst *a);

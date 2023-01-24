@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:40:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/23 19:53:34 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 22:39:01 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,4 +32,23 @@ void	swap(t_lst **lst)
 	*lst = second;
 	if (third)
 		third->prev = first;
+}
+
+void	sa(t_lst **a)
+{
+	swap(a);
+	ft_printf("sa\n");
+}
+
+void	sb(t_lst **b)
+{
+	swap(b);
+	ft_printf("sb\n");
+}
+
+void	ss(t_lst **a, t_lst **b)
+{
+	swap(a);
+	swap(b);
+	ft_printf("ss\n");
 }
