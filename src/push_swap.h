@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/23 19:37:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 22:22:10 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,14 +26,14 @@ typedef struct	s_lst
 t_lst	*lst_new(int num);
 int		lst_size(t_lst *lst);
 t_lst	*lst_first(t_lst *lst);
-void	lst_unshift(t_lst **lst, t_lst *node);
 t_lst	*lst_last(t_lst *lst);
 void	lst_push(t_lst **lst, t_lst *node);
-t_lst	*lst_shift(t_lst **lst);
-t_lst	*lst_pop(t_lst *lst);
 void	lst_clear(t_lst *lst);
 t_lst	*lst_find_by_num(t_lst *lst, int num);
 t_lst	*lst_find_by_index(t_lst *stack, int index);
+t_lst	*lst_remove_first(t_lst **lst);
+void	lst_add_front(t_lst **lst, t_lst *node);
+t_lst	*lst_remove_last(t_lst **lst);
 
 //error
 void	error_management(int argc, char **argv);
@@ -49,7 +49,10 @@ void	fill_lst_index(t_lst *lst);
 int		get_position(t_lst *lst, int index);
 
 //instructions
-
+void	swap(t_lst **lst);
+void	push(t_lst **dest, t_lst **src);
+void	rotate(t_lst **lst);
+void	reverse_rotate(t_lst **lst);
 
 //algo
 void	sort(t_lst *a);

@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/23 19:35:47 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/23 22:22:19 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -22,12 +22,19 @@ SRC			=	push_swap.c \
 				lst_last.c \
 				lst_push.c \
 				lst_clear.c \
-				get_numbers.c \
-				fill_lst_index.c \
 				lst_find_by_num.c \
 				lst_find_by_index.c \
+				lst_remove_first.c \
+				lst_add_front.c \
+				lst_remove_last.c \
+				get_numbers.c \
+				fill_lst_index.c \
 				print_lst.c \
 				get_position.c \
+				swap.c \
+				push.c \
+				rotate.c \
+				reverse_rotate.c \
 				#sort.c \
 				put_above.c \
 				two_solver.c \
@@ -47,7 +54,7 @@ NAME		=	push_swap
 
 LIBFT		=	./libft/libftprintf.a
 
-CFLAGS		=	-g -I./ -Wall -Werror -Wextra
+CFLAGS		=	-g -I./ -Wall -Wextra
 
 VPATH				=	./src \
 						./src/error \
