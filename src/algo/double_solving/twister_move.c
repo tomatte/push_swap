@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 18:42:17 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/17 18:51:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 22:46:12 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void	twister_move(t_lst **s)
 	index = stack->index;
 	while (index + 1 != lst_first(stack)->next->index)
 	{
-		sa(stack);
-		ra(stack);
+		sa(&stack);
+		ra(&stack);
 	}
 }

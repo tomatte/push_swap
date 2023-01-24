@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:19:03 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/17 14:41:19 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 22:48:49 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,16 @@ void	put_above(t_lst **a, t_lst **b, int pos)
 {
 	while (lst_first(*a)->index != pos)
 	{
-		ra(*a);
+		ra(a);
 	}
 	*a = lst_first(*a);
-	pb(a, b);
+	pb(b, a);
 	while (lst_first(*a)->index != pos + 1)
 	{
-		ra(*a);
+		ra(a);
 	}
 	*a = lst_first(*a);
-	pa(b, a);
+	pa(a, b);
 }
 
 /* 

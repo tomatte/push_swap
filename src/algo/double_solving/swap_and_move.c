@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 18:46:02 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/17 18:46:08 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/23 22:39:31 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	swap_and_move(t_lst *stack)
 
 	size = lst_size(stack);
 	index = size - 2;
-	stack = find_by_index(stack, index);
+	stack = lst_find_by_index(stack, index);
 	move_to_top(stack, index);
 	twister_move(&stack);
 
