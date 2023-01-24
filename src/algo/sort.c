@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:08:36 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/23 22:49:54 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/24 08:13:47 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 
 void	sort(t_lst *a)
 {
-	t_lst	*b;
 	int		size;
 
-	b = NULL;
 	size = lst_size(a);
 	switch (size)
 	{
@@ -28,7 +26,6 @@ void	sort(t_lst *a)
 			three_solver(a);
 			break ;
 		default :
-			simple_solver(&a, &b);
+			swap_and_move(a);
 	}
-	//print_lst(a);
 }
