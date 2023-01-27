@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/27 09:11:15 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/27 11:19:20 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,12 +41,14 @@ void	die(void);
 void	check_numbers(int argc, char **argv);
 void	check_duplicated_values(int argc, char **argv);
 void	check_numbers_size(int argc, char **argv);
+void	sort_verification(t_lst *stack);
 
 
 //utils
 t_lst	*get_numbers(int argc, char **argv);
 void	fill_lst_index(t_lst *lst);
 int		get_position(t_lst *lst, int index);
+int		is_lst_sorted(t_lst *a);
 
 //base instructions
 void	swap(t_lst **lst);
