@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/27 11:19:20 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/27 15:16:06 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ void	rrr(t_lst **a, t_lst **b);
 void	sort(t_lst *a);
 void	two_solver(t_lst *a);
 void	three_solver(t_lst *a);
-
+void	radix(t_lst *a);
 
 //temp
 void	print_lst(t_lst *lst);

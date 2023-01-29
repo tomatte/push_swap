@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/27 11:19:28 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/28 21:28:44 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRC			=	push_swap.c \
 				three_solver.c \
 				is_lst_sorted.c \
 				sort_verification.c \
+				radix.c \
 				
 
 OBJS_DIR			=	objects
@@ -58,10 +59,6 @@ VPATH				=	./src \
 						./src/utils \
 						./src/instructions \
 						./src/algo \
-						./src/algo/simple_solver \
-						./src/algo/double_solving \
-						./src/algo/double_solving/swap_and_move_a \
-						./src/algo/double_solving/swap_and_move_b \
 
 
 CC					=	cc
