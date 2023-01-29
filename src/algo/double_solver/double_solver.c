@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 09:43:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/29 15:24:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/29 17:17:42 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	double_solver(t_lst *a)
 	b = NULL;
 	send_to_b(&a, &b);
 	solve_a(&a);
+	solve_b(&b);
 	show(a, b);
 	ft_printf("double solver\n");
 }
