@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/28 21:28:44 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/28 21:54:35 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -41,6 +41,7 @@ SRC			=	push_swap.c \
 				is_lst_sorted.c \
 				sort_verification.c \
 				radix.c \
+				move_to_top.c \
 				
 
 OBJS_DIR			=	objects
@@ -59,6 +60,7 @@ VPATH				=	./src \
 						./src/utils \
 						./src/instructions \
 						./src/algo \
+						./src/algo/util \
 
 
 CC					=	cc
