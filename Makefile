@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/28 21:54:35 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/28 22:04:22 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -42,6 +42,7 @@ SRC			=	push_swap.c \
 				sort_verification.c \
 				radix.c \
 				move_to_top.c \
+				four_solver.c \
 				
 
 OBJS_DIR			=	objects
