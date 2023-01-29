@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/28 22:39:42 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/29 09:46:27 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	main(int argc, char *argv[])
 	fill_lst_index(stack_a);
 	sort_verification(stack_a);
 
-	sort(stack_a);
+	double_solver(stack_a);
 
 	//print_lst(stack_a);
 	lst_clear(stack_a);
