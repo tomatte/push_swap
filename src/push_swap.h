@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/29 17:40:25 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/30 14:38:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ void	twister_move(t_lst **a);
 void	solve_a(t_lst **a);
 void	solve_b(t_lst **b);
 void	move_to_top_b(t_lst **stack, int index);
+void	add_instruction(char **array, char instruction);
+void	print_instructions(char *arr)
 
 //temp
 void	print_lst(t_lst *lst);
