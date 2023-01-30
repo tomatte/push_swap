@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/18 09:24:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/29 09:46:27 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/29 17:38:31 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,8 @@ int	main(int argc, char *argv[])
 	fill_lst_index(stack_a);
 	sort_verification(stack_a);
 
-	double_solver(stack_a);
+	sort(stack_a);
 
-	//print_lst(stack_a);
 	lst_clear(stack_a);
 	return (0);
 }
@@ -56,5 +55,9 @@ RANDOM: 5 3 12  15 9 7 10
 
 SORTED: 3 5 7 9 10 12 15
 
+0
+1
+2
+3
 
  */

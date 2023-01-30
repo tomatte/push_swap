@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:08:36 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/28 22:38:29 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/29 17:38:24 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,6 @@ void	sort(t_lst *a)
 			five_solver(a);
 			break ;
 		default :
-			radix(a);
+			double_solver(a);
 	}
 }

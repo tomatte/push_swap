@@ -6,13 +6,25 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/29 15:40:13 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/29 17:40:25 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 # include "../libft/libftprintf.h"
+
+# define SA 101
+# define SB 201
+# define SS 1
+# define RA 102
+# define RB 202
+# define RR 2
+# define RRA 103
+# define RRB 203
+# define RRR 3
+# define PA 104
+# define PB 204
 
 typedef struct	s_lst
 {
@@ -83,6 +95,7 @@ void	double_solver(t_lst *a);
 void	twister_move(t_lst **a);
 void	solve_a(t_lst **a);
 void	solve_b(t_lst **b);
+void	move_to_top_b(t_lst **stack, int index);
 
 //temp
 void	print_lst(t_lst *lst);
