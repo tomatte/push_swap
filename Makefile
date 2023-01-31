@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/31 10:04:28 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/01/31 10:53:11 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -51,6 +51,7 @@ SRC			=	push_swap.c \
 				move_to_top_b.c \
 				add_instruction.c \
 				move_to_top_a.c \
+				simple_merge.c \
 				
 
 OBJS_DIR			=	objects

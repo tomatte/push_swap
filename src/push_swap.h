@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 10:05:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:55:00 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,6 +99,7 @@ void	move_to_top_a(t_lst **stack, int index, char **instructions);
 void	move_to_top_b(t_lst **stack, int index, char **instructions);
 void	add_instruction(char **array, char instruction);
 void	print_instructions(char *arr);
+char	*simple_merge(char *a, char *b);
 
 //temp
 void	print_lst(t_lst *lst);
