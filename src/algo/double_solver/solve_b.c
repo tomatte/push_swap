@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:18:54 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/29 17:40:55 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:13:38 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-static void	reverse_twister_move(t_lst **b)
+static void	reverse_twister_move(t_lst **b, char **instructions)
 {
 	int		index;
 	
@@ -22,11 +22,13 @@ static void	reverse_twister_move(t_lst **b)
 	{
 		sb(b);
 		rb(b);
+		add_instruction(instructions, SB);
+		add_instruction(instructions, RB);
 	}
 	*b = lst_first(*b);
 }
 
-void	solve_b(t_lst **b)
+void	solve_b(t_lst **b, char **instructions)
 {
 	int	i;
 	int	max_index;
@@ -35,8 +37,8 @@ void	solve_b(t_lst **b)
 	i = 1;
 	while (i <= max_index)
 	{
-		move_to_top_b(b, i);
-		reverse_twister_move(b);
+		move_to_top_b(b, i, instructions);
+		reverse_twister_move(b, instructions);
 		i++;
 	}
 }

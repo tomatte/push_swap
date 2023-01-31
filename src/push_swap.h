@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/30 14:38:59 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:05:26 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,17 @@
 # define PUSH_SWAP_H
 # include "../libft/libftprintf.h"
 
-# define SA 101
-# define SB 201
+# define SA 11
+# define SB 21
 # define SS 1
-# define RA 102
-# define RB 202
+# define RA 12
+# define RB 22
 # define RR 2
-# define RRA 103
-# define RRB 203
+# define RRA 13
+# define RRB 23
 # define RRR 3
-# define PA 104
-# define PB 204
+# define PA 14
+# define PB 24
 
 typedef struct	s_lst
 {
@@ -88,16 +88,17 @@ void	three_solver(t_lst *a);
 void	four_solver(t_lst *a);
 void	five_solver(t_lst *a);
 void	radix(t_lst *a);
-void	move_to_top(t_lst **stack, int index);
 
 //double_solver
 void	double_solver(t_lst *a);
-void	twister_move(t_lst **a);
-void	solve_a(t_lst **a);
-void	solve_b(t_lst **b);
-void	move_to_top_b(t_lst **stack, int index);
+void	twister_move(t_lst **a, char **instructions);
+void	solve_a(t_lst **a, char **instructions);
+void	solve_b(t_lst **b, char **instructions);
+void	move_to_top(t_lst **stack, int index);
+void	move_to_top_a(t_lst **stack, int index, char **instructions);
+void	move_to_top_b(t_lst **stack, int index, char **instructions);
 void	add_instruction(char **array, char instruction);
-void	print_instructions(char *arr)
+void	print_instructions(char *arr);
 
 //temp
 void	print_lst(t_lst *lst);

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/30 14:15:44 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/30 14:38:41 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 10:11:39 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,4 +21,5 @@ void	print_instructions(char *arr)
 {
 	while (*arr)
 		ft_printf("%d ", *arr++);
+	ft_printf("\n");
 }
