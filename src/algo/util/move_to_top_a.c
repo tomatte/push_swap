@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:50:05 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 10:14:28 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:06:56 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static void	ra_move(t_lst **stack, int index, char **instructions)
 {
 	while (lst_first(*stack)->index != index)
 	{
-		ra(stack);
+		rotate(stack);
 		add_instruction(instructions, RA);
 	}
 }
@@ -25,7 +25,7 @@ static void	rra_move(t_lst **stack, int index, char **instructions)
 {
 	while (lst_first(*stack)->index != index)
 	{
-		rra(stack);
+		reverse_rotate(stack);
 		add_instruction(instructions, RRA);
 	}
 }

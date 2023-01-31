@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 11:05:02 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/23 19:37:48 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:35:01 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,4 +89,5 @@ void	fill_lst_index(t_lst *lst)
 	size = lst_size(lst);
 	sort_ints(&numbers, size);
 	set_index(numbers, lst);
+	free(numbers);
 }

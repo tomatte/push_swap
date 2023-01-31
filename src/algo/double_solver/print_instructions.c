@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/31 13:37:53 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 13:50:05 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:57:38 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,20 +26,27 @@ static void	inst_print(char inst)
 		ft_printf("rb\n");
 	else if (inst == RR)
 		ft_printf("rr\n");
-	else if (inst == RR)
+	else if (inst == RRA)
 		ft_printf("rra\n");
-	else if (inst == RR)
+	else if (inst == RRB)
 		ft_printf("rrb\n");
 	else if (inst == RRR)
 		ft_printf("rrr\n");
 	else if (inst == PA)
 		ft_printf("pa\n");
-	else if (inst == SB)
+	else if (inst == PB)
 		ft_printf("pb\n");
 }
 
-void	print_instructions(char *instructions)
+static void	print_inst_array(char *instructions)
 {
 	while (*instructions)
 		inst_print(*instructions++);
+}
+
+void	print_instructions(char *b_pushs, char *merge, char *a_pushs)
+{
+	print_inst_array(b_pushs);
+	print_inst_array(merge);
+	print_inst_array(a_pushs);
 }

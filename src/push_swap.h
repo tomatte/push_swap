@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 10:55:00 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:58:10 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,6 +33,15 @@ typedef struct	s_lst
 	struct s_lst	*next;
 	struct s_lst	*prev;
 }	t_lst;
+
+typedef struct	s_data
+{
+	char	*a_instructions;
+	char	*b_instructions;
+	char	*a_pushs;
+	char	*b_pushs;
+	char	*merge;
+}	t_data;
 
 //list
 t_lst	*lst_new(int num);
@@ -98,8 +107,9 @@ void	move_to_top(t_lst **stack, int index);
 void	move_to_top_a(t_lst **stack, int index, char **instructions);
 void	move_to_top_b(t_lst **stack, int index, char **instructions);
 void	add_instruction(char **array, char instruction);
-void	print_instructions(char *arr);
+void	print_instructions_code(char *arr);
 char	*simple_merge(char *a, char *b);
+void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 
 //temp
 void	print_lst(t_lst *lst);

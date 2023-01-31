@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 09:43:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 10:16:44 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/01/31 17:56:36 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,19 +17,19 @@ static void	send_to_b(t_lst **a, t_lst **b, char **instructions)
 	int	max_index;
 	int	i;
 
-	max_index = lst_size(*a) / 2;
+	max_index = lst_size(*a) * 0.5;
 	i = 0;
 	while (i < max_index)
 	{
 		if (lst_first(*a)->index < max_index)
 		{
-			pb(b, a);
+			push(b, a);
 			add_instruction(instructions, PB);
 			i++;
 		}
 		else
 		{
-			ra(a);
+			rotate(a);
 			add_instruction(instructions, RA);
 		}
 	}
@@ -39,39 +39,41 @@ static void	push_back_to_a(t_lst **a, t_lst **b, char **instructions)
 {
 	while (*b)
 	{
-		pa(a, b);
+		push(a, b);
 		add_instruction(instructions, PA);
 	}
 }
 
-static void	show(t_lst *a, t_lst *b)
+static void	clear_instructions(t_data *data)
 {
-	ft_printf("STACK_A\n");
-	print_lst(a);
-	ft_printf("STACK_B\n");
-	print_lst(b);
+	free(data->b_pushs);
+	free(data->merge);
+	free(data->a_pushs);
+	free(data->a_instructions);
+	free(data->b_instructions);
+}
+
+static void	init_variables(t_data *data, t_lst **b)
+{
+	data->a_instructions = ft_strdup("");
+	data->b_instructions = ft_strdup("");
+	data->a_pushs = ft_strdup("");
+	data->b_pushs = ft_strdup("");
+	*b = NULL;
 }
 
 void	double_solver(t_lst *a)
 {
 	t_lst	*b;
-	char	*a_instructions;
-	char	*b_instructions;
-	char	*push_instructions;
+	t_data	data;
 
-	a_instructions = ft_strdup("");
-	b_instructions = ft_strdup("");
-	push_instructions = ft_strdup("");
-	b = NULL;
-	send_to_b(&a, &b, &push_instructions);
-	solve_a(&a, &a_instructions);
-	solve_b(&b, &b_instructions);
-	push_back_to_a(&a, &b, &push_instructions);
+	init_variables(&data, &b);
+	send_to_b(&a, &b, &data.b_pushs);
+	solve_a(&a, &data.a_instructions);
+	solve_b(&b, &data.b_instructions);
+	data.merge = simple_merge(data.a_instructions, data.b_instructions);
+	push_back_to_a(&a, &b, &data.a_pushs);
 	fill_lst_index(a);
-	ft_printf("A: ");
-	print_instructions(a_instructions);
-	ft_printf("B: ");
-	print_instructions(b_instructions);
-	//show(a, b);
-	//ft_printf("double solver\n");
+	print_instructions(data.b_pushs, data.merge, data.a_pushs);
+	clear_instructions(&data);
 }
