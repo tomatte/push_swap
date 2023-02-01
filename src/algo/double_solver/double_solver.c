@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 09:43:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 17:56:36 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/01 09:21:08 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,10 @@ void	double_solver(t_lst *a)
 	send_to_b(&a, &b, &data.b_pushs);
 	solve_a(&a, &data.a_instructions);
 	solve_b(&b, &data.b_instructions);
-	data.merge = simple_merge(data.a_instructions, data.b_instructions);
+	
+	frequency_merge(&data);
+
+	//data.merge = simple_merge(data.a_instructions, data.b_instructions);
 	push_back_to_a(&a, &b, &data.a_pushs);
 	fill_lst_index(a);
 	print_instructions(data.b_pushs, data.merge, data.a_pushs);
