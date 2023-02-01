@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/01 09:18:51 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/01 10:14:20 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,6 +54,7 @@ SRC			=	push_swap.c \
 				simple_merge.c \
 				print_instructions.c \
 				frequency_merge.c \
+				get_frequent_instruction.c \
 				
 
 OBJS_DIR			=	objects
@@ -74,6 +75,7 @@ VPATH				=	./src \
 						./src/algo \
 						./src/algo/util \
 						./src/algo/double_solver \
+						./src/algo/double_solver/frequency_merge \
 
 
 CC					=	cc

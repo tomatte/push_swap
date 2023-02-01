@@ -6,11 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 09:04:16 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/01 09:23:29 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/01 10:13:42 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../../push_swap.h"
+#include "../../../push_swap.h"
 
 void	frequency_merge(t_data *data)
 {
@@ -19,8 +19,8 @@ void	frequency_merge(t_data *data)
 	ft_printf("BEFORE: \n");
 	print_instructions_code(data->a_instructions);
 	
-	//most_frequent = get_frequent_instruction(data->b_instructions);
-	most_frequent = 9;
+	most_frequent = get_frequent_instruction(data->b_instructions);
+
 	ft_printf("most frequent: %d\n", most_frequent);
 
 /* 	replace_instructions(&a, most_frequent);
