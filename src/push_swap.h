@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/01 14:09:16 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/03 09:40:56 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,6 +124,7 @@ char	*simple_merge(char *a, char *b);
 void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 void	frequency_merge(t_data *data);
 void	fill_frequency_struct(t_data *data, t_frequency *frequency);
+void	replace_instructions(t_data *data, t_frequency *frequency);
 
 //temp
 void	print_lst(t_lst *lst);
