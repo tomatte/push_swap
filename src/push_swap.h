@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/01 10:13:34 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/01 14:09:16 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,18 @@ typedef struct	s_data
 	char	*b_pushs;
 	char	*merge;
 }	t_data;
+
+typedef struct	s_frequency
+{
+	int		swaps_a;
+	int		rotates_a;
+	int		reverses_a;
+	int		swaps_b;
+	int		rotates_b;
+	int		reverses_b;
+	int		times;
+	char	frequent;
+}	t_frequency;
 
 //list
 t_lst	*lst_new(int num);
@@ -111,7 +123,7 @@ void	print_instructions_code(char *arr);
 char	*simple_merge(char *a, char *b);
 void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 void	frequency_merge(t_data *data);
-int	get_frequent_instruction(char *instructions);
+void	fill_frequency_struct(t_data *data, t_frequency *frequency);
 
 //temp
 void	print_lst(t_lst *lst);
