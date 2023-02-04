@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/06 18:08:36 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 17:14:25 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:12:35 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,10 @@ void	sort(t_lst *a)
 		two_solver(a);
 	else if (size == 3)
 		three_solver(a);
-	else if (size == 4)
-		four_solver(a);
 	else if (size < 20)
 		double_solver(a);
+	else if (size <= 100)
+		push_rotate(a);
 	else
 		radix(a);
 }

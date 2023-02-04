@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/01/31 13:51:23 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/04 11:57:22 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,6 +53,9 @@ SRC			=	push_swap.c \
 				move_to_top_a.c \
 				simple_merge.c \
 				print_instructions.c \
+				push_rotate.c \
+				push_rotate_algorithm.c \
+				get_top_index.c \
 				
 
 OBJS_DIR			=	objects
@@ -73,6 +76,7 @@ VPATH				=	./src \
 						./src/algo \
 						./src/algo/util \
 						./src/algo/double_solver \
+						./src/algo/push_rotate \
 
 
 CC					=	cc

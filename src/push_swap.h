@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 17:58:10 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 11:57:13 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -110,6 +110,11 @@ void	add_instruction(char **array, char instruction);
 void	print_instructions_code(char *arr);
 char	*simple_merge(char *a, char *b);
 void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
+
+//push_rotate
+void	push_rotate(t_lst *a);
+void	push_rotate_algorithm(t_lst **a, t_lst **b);
+int		get_top_index(t_lst *a, t_lst *b);
 
 //temp
 void	print_lst(t_lst *lst);

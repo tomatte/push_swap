@@ -6,27 +6,23 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 11:10:26 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/04 11:16:07 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 16:06:07 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-/* 
- da pra mover a stack_a até o numero correto pra usar o pa()
-
- mas também da pra mover a stack_b pra ate o numero correto pra dar o pa()
-
- eu posso fazer essas duas logicas e calcular qual é menos custosa
-
- */
-
-static void	push_rotate_algorithm(t_lst **a, t_lst **b)
+void	push_rotate_algorithm(t_lst **a, t_lst **b)
 {
-	while (!is_lst_sorted(*a))
+	int	index_top;
+
+	*a = lst_first(*a);
+	*b = lst_first(*b);
+	while (*b)
 	{
-		get_top_number(*a, *b);
-		move_number_to_top(a);
+		index_top = get_top_index(*a, *b);
+		move_to_top(a, index_top);
 		pa(a, b);
 	}
+	move_to_top(a, 0);
 }

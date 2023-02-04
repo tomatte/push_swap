@@ -6,22 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 11:55:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/04 15:47:18 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:55:26 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
-
-/* se for menor que todos, mover o antigo menor pro topo
-
-se for maior que todos, mover o antigo maior pro topo
-
-
-entre maior relativo e menor relativo
-		if (a->index > b->index && a->index < top_index)
-			top_index = a->index;
-		ra(a)
-	return (top_index); */
 
 static int	get_lowest_index(t_lst *stack)
 {
