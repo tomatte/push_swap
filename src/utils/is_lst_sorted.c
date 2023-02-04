@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/27 11:04:00 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/27 11:13:23 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 11:35:46 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,15 +14,10 @@
 
 int	is_lst_sorted(t_lst *a)
 {
-	int	size;
-	int	index;
-
 	a = lst_first(a);
-	size = lst_size(a);
-	index = -1;
-	while (++index < size)
+	while (a->next)
 	{
-		if (a->index != index)
+		if (a->index > a->next->index)
 			return (0);
 		a = a->next;
 	}
