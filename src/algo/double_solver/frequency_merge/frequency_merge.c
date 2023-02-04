@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/01 09:04:16 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/01 10:13:42 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/03 09:41:37 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,33 @@
 
 void	frequency_merge(t_data *data)
 {
-	int		most_frequent;
-
-	ft_printf("BEFORE: \n");
-	print_instructions_code(data->a_instructions);
+	t_frequency	frequency;
 	
-	most_frequent = get_frequent_instruction(data->b_instructions);
+	fill_frequency_struct(data, &frequency);
 
-	ft_printf("most frequent: %d\n", most_frequent);
+	replace_instructions(data, &frequency);
 
-/* 	replace_instructions(&a, most_frequent);
+/* 	replace_instructions(&data->a_instructions, most_frequent);
 
 	ft_printf("AFTER: \n");
-	print_instructions_code(a); */
+	print_instructions_code(data->a_instructions); */
 	exit(0);
 }
+
+/* 
+	comparar as frequencias de A e B
+	
+	escolher a menor que seja maior
+	ex:
+		swaps_b == 8
+		swaps_a == 10
+		rotates_b == 12
+		rotates_a == 7
+
+		swaps_menor == 8
+		rotates_menor == 7
+
+		escolhida: swaps_menor
+		
+		trocar 8 SA e 8 SB por 8 SS
+ */

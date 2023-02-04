@@ -6,29 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/03 09:25:49 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/03 09:40:32 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 09:04:52 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../../push_swap.h"
-
-static void	replace_with_next_equal(char **instructions, char most_frequent)
-{
-	int	i;
-
-	i = 0;
-	while ((*instructions)[i])
-	{
-		if ((*instructions)[i] % 10 == most_frequent)
-			(*instructions)[i] = most_frequent;
-		i++;
-	}
-}
-
-static void	replace_most_frequent()
-{
-
-}
 
 static void	fill_big_and_small(t_data *data, char **big, char **small)
 {
@@ -49,13 +31,26 @@ static void	fill_big_and_small(t_data *data, char **big, char **small)
 	}
 }
 
+static void	replace_most_frequent(t_frequency *frequency, char **big)
+{
+	int	i;
+
+	i = 0;
+	while ((*big)[i] && i < frequency->times)
+	{
+		if ((*big)[i] % 10 == frequency->frequent)
+			(*big)[i] = frequency->frequent;
+		i++;
+	}
+}
+
 void	replace_instructions(t_data *data, t_frequency *frequency)
 {
 	char	*big;
 	char	*small;
 
 	fill_big_and_small(data, &big, &small);
+	replace_most_frequent(frequency, &big);
 	print_instructions_code(big);
-	print_instructions_code(small);
 	exit(0);
 }

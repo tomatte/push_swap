@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 09:43:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/01 09:21:08 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/03 08:48:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	send_to_b(t_lst **a, t_lst **b, char **instructions)
 	int	max_index;
 	int	i;
 
-	max_index = lst_size(*a) * 0.5;
+	max_index = lst_size(*a) * 0.50;
 	i = 0;
 	while (i < max_index)
 	{
@@ -72,6 +72,9 @@ void	double_solver(t_lst *a)
 	solve_a(&a, &data.a_instructions);
 	solve_b(&b, &data.b_instructions);
 	
+	print_instructions_code(data.b_instructions);
+	ft_printf("size stack_b: %d\nsize stack_a: %d\n", lst_size(b), lst_size(a));
+
 	frequency_merge(&data);
 
 	//data.merge = simple_merge(data.a_instructions, data.b_instructions);
