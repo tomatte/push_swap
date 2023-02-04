@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 11:55:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/04 15:35:18 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/04 15:47:18 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,19 @@ static int	get_lowest_to_top(t_lst *a, t_lst *b)
 	return (-1);
 }
 
+static int	get_index_above(t_lst *a, t_lst *b)
+{
+	int	index_above;
 
+	index_above = get_highest_index(a);
+	while (a)
+	{
+		if (a->index > b->index && a->index < index_above)
+			index_above = a->index;
+		a = a->next;
+	}
+	return (index_above);
+}
 
 int	get_top_index(t_lst *a, t_lst *b)
 {
@@ -74,6 +86,5 @@ int	get_top_index(t_lst *a, t_lst *b)
 	top = get_lowest_to_top(a, b);
 	if (top >= 0)
 		return (top);
-	// top = get_bigger_between()
-	return (top);
+	return (get_index_above(a, b));
 }
