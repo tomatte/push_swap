@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:22:51 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/23 13:00:54 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/07 14:24:02 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,6 @@
 
 void	die(void)
 {
-	ft_printf("Error\n");
+	ft_putstr_fd("Error\n", 2);
 	exit(1);
 }

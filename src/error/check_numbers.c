@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 12:39:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/23 12:39:37 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/07 14:33:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ static int	is_number(char *str)
 		return (0);
 	if (ft_issign(*str))
 		str++;
+	if (!*str)
+		return (0);
 	i = -1;
 	while (str[++i])
 	{
