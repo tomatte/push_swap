@@ -6,13 +6,13 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:27:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 09:58:55 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 10:47:50 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-static int	smaller(int	x, int y)
+static int	smaller(int x, int y)
 {
 	if (x < y)
 		return (x);
@@ -20,25 +20,20 @@ static int	smaller(int	x, int y)
 		return (y);
 }
 
-static int	get_b_moves(t_lst *b, int index)
+static int	get_moves(t_lst *stack, int index)
 {
 	int	size;
 	int	position;
-	int	ra_moves;
-	int	rra_moves;
+	int	rotates;
+	int	reverses;
 
-	size = lst_size(b);
-	position = get_position(b, index);
+	size = lst_size(stack);
+	position = get_position(stack, index);
 	if (position < 0)
 		return (-1);
-	ra_moves = position;
-	rra_moves = size - position;
-	return (smaller(ra_moves, rra_moves));
-}
-
-static int	get_a_moves(t_lst *a, int index)
-{
-	//quantidade de movimentos pra colocar o maior relativo a index no topo
+	rotates = position;
+	reverses = size - position;
+	return (smaller(rotates, reverses));
 }
 
 static void	show(t_lst *a, t_lst *b)
@@ -49,19 +44,38 @@ static void	show(t_lst *a, t_lst *b)
 	print_lst(a);
 }
 
+static int	get_total_moves(t_lst *a, t_lst *b, int b_index)
+{
+	int	moves_a;
+	int	moves_b;
+
+	moves_b = get_moves(b, b_index);
+	moves_a = get_moves(a, get_top_index(a, b_index));
+	if (moves_a < 0 || moves_b < 0)
+		return (-1);
+	return (moves_a + moves_b);
+}
+
+//verificar custo de todos os index em b e retornar o menor
 int	get_cheapest_index(t_lst *a, t_lst *b)
 {
-	//verificar custo de todos os index em b e retornar o menor
-	int	index;
-	int result;
+	int	cheapest_index;
+	int	cheapest_moves;
+	int	moves;
 
-	show(a, b);
-
-	result = get_b_moves(b, index);
-	ft_printf("index %d: (%d)\n", index, result);
-
-	exit(0);
-	return (0);
+	cheapest_index = b->index;
+	cheapest_moves = get_total_moves(a, b, b->index);
+	while (b->next)
+	{
+		b = b->next;
+		moves = get_total_moves(a, b, b->index);
+		if (moves < cheapest_moves)
+		{
+			cheapest_moves = moves;
+			cheapest_index = b->index;
+		}
+	}
+	return (cheapest_index);
 }
 
 /* 
