@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 11:55:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/04 15:55:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 10:06:26 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,38 +42,38 @@ static int	get_highest_index(t_lst *stack)
 	return (highest);
 }
 
-static int	get_lowest_to_top(t_lst *a, t_lst *b)
+static int	get_lowest_to_top(t_lst *a, int b_index)
 {
 	int	lowest;
 	int	highest;
 
 	lowest = get_lowest_index(a);
 	highest = get_highest_index(a);
-	if (b->index < lowest || b->index > highest)
+	if (b_index < lowest || b_index > highest)
 		return (lowest);
 	return (-1);
 }
 
-static int	get_index_above(t_lst *a, t_lst *b)
+static int	get_index_above(t_lst *a, int b_index)
 {
 	int	index_above;
 
 	index_above = get_highest_index(a);
 	while (a)
 	{
-		if (a->index > b->index && a->index < index_above)
+		if (a->index > b_index && a->index < index_above)
 			index_above = a->index;
 		a = a->next;
 	}
 	return (index_above);
 }
 
-int	get_top_index(t_lst *a, t_lst *b)
+int	get_top_index(t_lst *a, int b_index)
 {
 	int	top;
 
-	top = get_lowest_to_top(a, b);
+	top = get_lowest_to_top(a, b_index);
 	if (top >= 0)
 		return (top);
-	return (get_index_above(a, b));
+	return (get_index_above(a, b_index));
 }

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:27:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 10:47:50 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:30:30 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,6 @@ static int	get_moves(t_lst *stack, int index)
 	return (smaller(rotates, reverses));
 }
 
-static void	show(t_lst *a, t_lst *b)
-{
-	ft_printf("List B\n");
-	print_lst(b);
-	ft_printf("\nList A\n");
-	print_lst(a);
-}
-
 static int	get_total_moves(t_lst *a, t_lst *b, int b_index)
 {
 	int	moves_a;
@@ -56,7 +48,6 @@ static int	get_total_moves(t_lst *a, t_lst *b, int b_index)
 	return (moves_a + moves_b);
 }
 
-//verificar custo de todos os index em b e retornar o menor
 int	get_cheapest_index(t_lst *a, t_lst *b)
 {
 	int	cheapest_index;
@@ -77,32 +68,3 @@ int	get_cheapest_index(t_lst *a, t_lst *b)
 	}
 	return (cheapest_index);
 }
-
-/* 
-1
-2
-5
-11
-15
-19
-20
-
-size - position == rra_moves
-
-position == ra_moves
-
-13
-rra_moves == 7 - 3 == 4
-ra_moves == 3
-
-12
-rra_moves == 
-
-12
-6
-18
-13*
-16
-3
-9
- */
