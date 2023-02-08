@@ -6,31 +6,25 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:50:05 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 17:07:30 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:17:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
 
-static void	rb_move(t_lst **stack, int index, char **instructions)
+static void	rb_move(t_lst **stack, int index)
 {
 	while (lst_first(*stack)->index != index)
-	{
-		rotate(stack);
-		add_instruction(instructions, RB);
-	}
+		rb(stack);
 }
 
-static void	rrb_move(t_lst **stack, int index, char **instructions)
+static void	rrb_move(t_lst **stack, int index)
 {
 	while (lst_first(*stack)->index != index)
-	{
-		reverse_rotate(stack);
-		add_instruction(instructions, RRB);
-	}
+		rrb(stack);
 }
 
-void	move_to_top_b(t_lst **stack, int index, char **instructions)
+void	move_to_top_b(t_lst **stack, int index)
 {
 	int	position;
 	int	size;
@@ -38,7 +32,7 @@ void	move_to_top_b(t_lst **stack, int index, char **instructions)
 	size = lst_size(*stack);
 	position = get_position(*stack, index);
 	if (position > size - position)
-		rrb_move(stack, index, instructions);
+		rrb_move(stack, index);
 	else
-		rb_move(stack, index,instructions);
+		rb_move(stack, index);
 }

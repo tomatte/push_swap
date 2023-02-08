@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/04 11:57:13 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 11:18:33 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,8 +104,8 @@ void	twister_move(t_lst **a, char **instructions);
 void	solve_a(t_lst **a, char **instructions);
 void	solve_b(t_lst **b, char **instructions);
 void	move_to_top(t_lst **stack, int index);
-void	move_to_top_a(t_lst **stack, int index, char **instructions);
-void	move_to_top_b(t_lst **stack, int index, char **instructions);
+void	move_to_top_a(t_lst **stack, int index);
+void	move_to_top_b(t_lst **stack, int index);
 void	add_instruction(char **array, char instruction);
 void	print_instructions_code(char *arr);
 char	*simple_merge(char *a, char *b);
@@ -114,7 +114,8 @@ void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 //push_rotate
 void	push_rotate(t_lst *a);
 void	push_rotate_algorithm(t_lst **a, t_lst **b);
-int		get_top_index(t_lst *a, t_lst *b);
+int		get_top_index(t_lst *a, int b_index);
+int		get_cheapest_index(t_lst *a, t_lst *b);
 
 //temp
 void	print_lst(t_lst *lst);
