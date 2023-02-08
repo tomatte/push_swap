@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 12:07:34 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:31:30 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,9 @@
 # define RRR 3
 # define PA 14
 # define PB 24
+# define MUTUAL_ROTATES 200;
+# define MUTUAL_REVERSES 300;
+# define ROTATE_AND_REVERSE 500;
 
 typedef struct s_lst
 {
@@ -42,6 +45,16 @@ typedef struct s_data
 	char	*b_pushs;
 	char	*merge;
 }	t_data;
+
+typedef struct s_strategy
+{
+	int	rotate_index;
+	int	rotate_moves;
+	int	reverse_index;
+	int	reverse_moves;
+	int	updown_index;
+	int	updown_moves;
+}	t_strategy;
 
 //list
 t_lst	*lst_new(int num);
@@ -69,6 +82,7 @@ t_lst	*get_numbers(int argc, char **argv);
 void	fill_lst_index(t_lst *lst);
 int		get_position(t_lst *lst, int index);
 int		is_lst_sorted(t_lst *a);
+void	first_ab(t_lst **a, t_lst **b);
 
 //base instructions
 void	swap(t_lst **lst);
@@ -105,6 +119,8 @@ void	solve_b(t_lst **b, char **instructions);
 void	move_to_top(t_lst **stack, int index);
 void	move_to_top_a(t_lst **stack, int index);
 void	move_to_top_b(t_lst **stack, int index);
+void	array_move_to_top_a(t_lst **stack, int index, char **instructions);
+void	array_move_to_top_b(t_lst **stack, int index, char **instructions);
 void	add_instruction(char **array, char instruction);
 void	print_instructions_code(char *arr);
 char	*simple_merge(char *a, char *b);
@@ -114,7 +130,10 @@ void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 void	push_rotate(t_lst *a);
 void	push_rotate_algorithm(t_lst **a, t_lst **b);
 int		get_top_index(t_lst *a, int b_index);
-int		get_cheapest_index(t_lst *a, t_lst *b);
+void	fill_updown_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
+void	fill_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
+void	fill_rotate_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
+void	fill_reverse_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 
 //temp
 void	print_lst(t_lst *lst);

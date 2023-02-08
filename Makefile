@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/08 09:00:30 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/08 15:31:37 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -48,15 +48,20 @@ SRC			=	push_swap.c \
 				twister_move.c \
 				solve_a.c \
 				solve_b.c \
+				array_move_to_top_a.c \
+				array_move_to_top_b.c \
 				move_to_top_b.c \
 				add_instruction.c \
 				move_to_top_a.c \
 				simple_merge.c \
 				print_instructions.c \
 				push_rotate.c \
-				push_rotate_algorithm.c \
 				get_top_index.c \
-				get_cheapest_index.c \
+				fill_updown_strategy.c \
+				fill_strategy.c \
+				first_ab.c \
+				fill_rotate_strategy.c \
+				fill_reverse_strategy.c \
 				
 
 OBJS_DIR			=	objects
