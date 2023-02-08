@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:18:54 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 12:10:19 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:51:14 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ void	solve_b(t_lst **b, char **instructions)
 	i = 1;
 	while (i <= max_index)
 	{
-		move_to_top_b(b, i, instructions);
+		array_move_to_top_b(b, i, instructions);
 		reverse_twister_move(b, instructions);
 		i++;
 	}
