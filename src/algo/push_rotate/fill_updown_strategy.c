@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/07 16:27:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 14:51:48 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 14:56:11 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,6 @@ void	fill_updown_strategy(t_lst *a, t_lst *b, t_strategy *strategy)
 			cheapest_index = b->index;
 		}
 	}
-	strategy->rotate_and_reverse_index = cheapest_index;
-	strategy->rotate_and_reverse_moves = cheapest_moves;
+	strategy->updown_index = cheapest_index;
+	strategy->updown_moves = cheapest_moves;
 }
