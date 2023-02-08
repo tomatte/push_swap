@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/23 19:40:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/23 22:39:01 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:08:54 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	swap(t_lst **lst)
 		return ;
 	first = lst_first(*lst);
 	second = first->next;
-	third	= second->next;
+	third = second->next;
 	second->prev = NULL;
 	second->next = first;
 	first->prev = second;

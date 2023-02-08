@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 11:18:33 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:07:34 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@
 # define PA 14
 # define PB 24
 
-typedef struct	s_lst
+typedef struct s_lst
 {
 	int				num;
 	int				index;
@@ -34,7 +34,7 @@ typedef struct	s_lst
 	struct s_lst	*prev;
 }	t_lst;
 
-typedef struct	s_data
+typedef struct s_data
 {
 	char	*a_instructions;
 	char	*b_instructions;
@@ -63,7 +63,6 @@ void	check_numbers(int argc, char **argv);
 void	check_duplicated_values(int argc, char **argv);
 void	check_numbers_size(int argc, char **argv);
 void	sort_verification(t_lst *stack);
-
 
 //utils
 t_lst	*get_numbers(int argc, char **argv);

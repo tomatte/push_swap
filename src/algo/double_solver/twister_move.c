@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:08:22 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 17:08:21 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:09:57 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 void	twister_move(t_lst **a, char **instructions)
 {
 	int		index;
-	
+
 	*a = lst_first(*a);
 	index = (*a)->index;
 	while (index + 1 != lst_first(*a)->next->index)

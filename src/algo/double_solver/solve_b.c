@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/29 10:18:54 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 17:08:47 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:10:19 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 static void	reverse_twister_move(t_lst **b, char **instructions)
 {
 	int		index;
-	
+
 	*b = lst_first(*b);
 	index = (*b)->index;
 	while (index - 1 != lst_first(*b)->next->index)
@@ -42,4 +42,3 @@ void	solve_b(t_lst **b, char **instructions)
 		i++;
 	}
 }
-

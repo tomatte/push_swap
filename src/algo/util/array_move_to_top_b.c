@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/28 21:50:05 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 11:18:45 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 12:09:38 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,5 +40,5 @@ void	array_move_to_top_b(t_lst **stack, int index, char **instructions)
 	if (position > size - position)
 		rrb_move(stack, index, instructions);
 	else
-		rb_move(stack, index,instructions);
+		rb_move(stack, index, instructions);
 }
