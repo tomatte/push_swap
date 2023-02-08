@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/04 11:55:48 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 10:06:26 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/08 15:09:41 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,6 +72,7 @@ int	get_top_index(t_lst *a, int b_index)
 {
 	int	top;
 
+	a = lst_first(a);
 	top = get_lowest_to_top(a, b_index);
 	if (top >= 0)
 		return (top);
