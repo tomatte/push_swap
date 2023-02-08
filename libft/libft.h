@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: coder <coder@student.42.fr>                +#+  +:+       +#+        */
+/*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/31 20:27:51 by dbrandao          #+#    #+#             */
-/*   Updated: 2022/12/16 15:23:40 by coder            ###   ########.fr       */
+/*   Updated: 2023/02/08 13:22:59 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,5 +129,8 @@ void	ft_str_push_char(char **str, char c);
 
 //potentiation
 int		ft_pow(int num, int power);
+
+int	ft_lowest(int x, int y);
+int	ft_highest(int x, int y);
 
 #endif
