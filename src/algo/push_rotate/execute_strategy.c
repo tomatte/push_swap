@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:47:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/09 14:25:37 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:43:58 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,19 @@ void	execute_updown(t_lst **a, t_lst **b, t_strategy *strategy)
 	a_index = get_top_index(*a, strategy->updown_index);
 	move_to_top_a(a, a_index);
 	move_to_top_b(b, strategy->updown_index);
-	pa(a, b);
 }
 
-void	execute_rotates(t_lst *a, t_lst *b, t_strategy *strategy)
+void	execute_rotates(t_lst **a, t_lst **b, t_strategy *strategy)
 {
+	int	a_index;
 
+	a_index = get_top_index(*a, strategy->updown_index);
+	while ((*a)->index != a_index && (*b)->index != strategy->updown_index)
+	{
+		rr(a, b);
+	}
+	move_to_top_a(a, a_index);
+	move_to_top_b(b, strategy->updown_index);
 }
 
 void	execute_reverses(t_lst *a, t_lst *b, t_strategy *strategy)
@@ -43,9 +50,10 @@ void	execute_strategy(t_lst **a, t_lst **b, t_strategy *strategy)
 	reverses = strategy->reverse_moves;
 	updowns = strategy->updown_moves;
 	//if (updowns <= reverses && updowns <= rotates)
-	execute_updown(a, b, strategy);
-/* 	else if (rotates <= reverses && rotates <= updowns)
-		execute_rotates();
-	else
+	//	execute_updown(a, b, strategy);
+	//else if (rotates <= reverses && rotates <= updowns)
+	execute_rotates(a, b, strategy);
+/* 	else
 		execute_reverses(); */
+	pa(a, b);
 }
