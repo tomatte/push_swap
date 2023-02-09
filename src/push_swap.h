@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 15:31:30 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/09 14:26:48 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -128,12 +128,13 @@ void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 
 //push_rotate
 void	push_rotate(t_lst *a);
-void	push_rotate_algorithm(t_lst **a, t_lst **b);
+void	push_rotate_algorithm(t_lst **a, t_lst **b, t_strategy *strategy);
 int		get_top_index(t_lst *a, int b_index);
 void	fill_updown_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	fill_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	fill_rotate_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	fill_reverse_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
+void	execute_strategy(t_lst **a, t_lst **b, t_strategy *strategy);
 
 //temp
 void	print_lst(t_lst *lst);

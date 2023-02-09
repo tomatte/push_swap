@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/08 15:31:37 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/09 14:03:37 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -62,6 +62,8 @@ SRC			=	push_swap.c \
 				first_ab.c \
 				fill_rotate_strategy.c \
 				fill_reverse_strategy.c \
+				execute_strategy.c \
+				push_rotate_algorithm.c \
 				
 
 OBJS_DIR			=	objects
