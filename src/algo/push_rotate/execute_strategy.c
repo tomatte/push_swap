@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:47:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/09 15:07:15 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/11 15:15:37 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,26 +26,26 @@ static void	execute_rotates(t_lst **a, t_lst **b, t_strategy *strategy)
 {
 	int	a_index;
 
-	a_index = get_top_index(*a, strategy->updown_index);
-	while ((*a)->index != a_index && (*b)->index != strategy->updown_index)
+	a_index = get_top_index(*a, strategy->rotate_index);
+	while (lst_first(*a)->index != a_index && lst_first(*b)->index != strategy->rotate_index)
 	{
 		rr(a, b);
 	}
 	move_to_top_a(a, a_index);
-	move_to_top_b(b, strategy->updown_index);
+	move_to_top_b(b, strategy->rotate_index);
 }
 
 static void	execute_reverses(t_lst **a, t_lst **b, t_strategy *strategy)
 {
 	int	a_index;
 
-	a_index = get_top_index(*a, strategy->updown_index);
-	while ((*a)->index != a_index && (*b)->index != strategy->updown_index)
+	a_index = get_top_index(*a, strategy->reverse_index);
+	while ((*a)->index != a_index && (*b)->index != strategy->reverse_index)
 	{
 		rrr(a, b);
 	}
 	move_to_top_a(a, a_index);
-	move_to_top_b(b, strategy->updown_index);
+	move_to_top_b(b, strategy->reverse_index);
 }
 
 void	execute_strategy(t_lst **a, t_lst **b, t_strategy *strategy)
