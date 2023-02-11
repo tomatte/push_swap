@@ -6,19 +6,11 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 14:03:08 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/08 15:22:58 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/11 15:16:04 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../push_swap.h"
-
-static void	show(t_lst *a, t_lst *b)
-{
-	ft_printf("\nList A\n");
-	print_lst(a);
-	ft_printf("\nList A\n");
-	print_lst(b);
-}
 
 static int	get_mutual_rotate_moves(t_lst *a, t_lst *b, int b_index)
 {
