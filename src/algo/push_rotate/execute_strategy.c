@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/08 15:47:52 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/11 15:15:37 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/11 15:39:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,8 @@ static void	execute_rotates(t_lst **a, t_lst **b, t_strategy *strategy)
 	int	a_index;
 
 	a_index = get_top_index(*a, strategy->rotate_index);
-	while (lst_first(*a)->index != a_index && lst_first(*b)->index != strategy->rotate_index)
+	while (lst_first(*a)->index != a_index
+		&& lst_first(*b)->index != strategy->rotate_index)
 	{
 		rr(a, b);
 	}
@@ -40,7 +41,8 @@ static void	execute_reverses(t_lst **a, t_lst **b, t_strategy *strategy)
 	int	a_index;
 
 	a_index = get_top_index(*a, strategy->reverse_index);
-	while ((*a)->index != a_index && (*b)->index != strategy->reverse_index)
+	while (lst_first(*a)->index != a_index
+		&& lst_first(*b)->index != strategy->reverse_index)
 	{
 		rrr(a, b);
 	}
