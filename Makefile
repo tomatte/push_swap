@@ -6,10 +6,11 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/09 14:03:37 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/11 21:39:26 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
+#------------------------ PUSH_SWAP ----------------------------
 SRC			=	push_swap.c \
 				die.c \
 				check_numbers.c \
@@ -63,14 +64,24 @@ SRC			=	push_swap.c \
 				fill_rotate_strategy.c \
 				fill_reverse_strategy.c \
 				execute_strategy.c \
-				push_rotate_algorithm.c \
-				
+				push_rotate_algorithm.c
 
-OBJS_DIR			=	objects
 
 OBJS				=	$(patsubst %.c,objects/%.o, $(SRC))
 
 NAME		=	push_swap
+#------------------------------------------------------------#
+
+
+#------------------------ CHECKER ----------------------------#
+BONUS_SRC	=	checker.c
+
+BONUS_OBJS			=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
+
+BONUS_NAME			=	checker
+#------------------------------------------------------------#
+
+OBJS_DIR			=	objects
 
 LIBFT		=	./libft/libftprintf.a
 
@@ -85,6 +96,7 @@ VPATH				=	./src \
 						./src/algo/util \
 						./src/algo/double_solver \
 						./src/algo/push_rotate \
+						./bonus_src \
 
 
 CC					=	cc
@@ -94,11 +106,16 @@ $(OBJS_DIR)/%.o:	%.c
 
 all: $(NAME)
 
+bonus:	$(BONUS_NAME)
+
 $(OBJS_DIR):
 						mkdir -p $@
 
 $(NAME): $(OBJS_DIR) $(OBJS) $(LIBFT)
 	$(CC) ${OBJS} ${CFLAGS} ${LIBFT} -o $@
+
+$(BONUS_NAME): $(OBJS_DIR) $(BONUS_OBJS) $(LIBFT)
+	$(CC) ${BONUS_OBJS} ${CFLAGS} ${LIBFT} -o $@
 	
 
 $(LIBFT):
