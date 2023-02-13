@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 21:07:56 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 13:48:40 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 14:01:56 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,6 @@
 void	checker(int argc, char *argv[]);
 int		is_str_equal(char *s1, char *s2);
 char	*read_instructions(void);
-void	execute_instructions(t_lst *stack_a, char *codes);
+void	execute_instructions(t_lst **stack_a, t_lst **stack_b, char *codes);
 
 #endif

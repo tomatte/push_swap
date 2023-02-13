@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 13:48:58 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 14:08:00 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -99,6 +99,9 @@ BONUS_SRC	=	checker.c \
 				push.c \
 				rotate.c \
 				reverse_rotate.c \
+				is_lst_sorted.c \
+				fill_lst_index.c \
+				print_lst.c \
 
 BONUS_OBJS	=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
 

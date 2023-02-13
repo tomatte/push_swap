@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/13 13:34:34 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 13:50:55 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 14:10:09 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,12 +56,10 @@ static void	execute(t_lst **a, t_lst **b, char code)
 		push(b, a);
 }
 
-void	execute_instructions(t_lst *stack_a, char *codes)
+void	execute_instructions(t_lst **stack_a, t_lst **stack_b, char *codes)
 {
-	t_lst	*stack_b;
-
-	stack_b = NULL;
-	stack_a = lst_first(stack_a);
+	*stack_b = NULL;
+	*stack_a = lst_first(*stack_a);
 	while (*codes)
-		execute(&stack_a, &stack_b, *codes++);
+		execute(stack_a, stack_b, *codes++);
 }
