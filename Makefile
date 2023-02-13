@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 10:20:00 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 13:32:08 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,30 +77,47 @@ NAME		=	push_swap
 BONUS_SRC	=	checker.c \
 				read_instructions.c \
 				is_str_equal.c \
+				die.c \
+				check_numbers.c \
+				error_management.c \
+				check_duplicated_values.c \
+				check_numbers_size.c \
+				get_numbers.c \
+				lst_new.c \
+				lst_size.c \
+				lst_first.c \
+				lst_last.c \
+				lst_push.c \
+				lst_clear.c \
+				lst_find_by_num.c \
+				lst_find_by_index.c \
+				lst_remove_first.c \
+				lst_add_front.c \
+				lst_remove_last.c \
 
-BONUS_OBJS			=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
+BONUS_OBJS	=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
 
-BONUS_NAME			=	checker
+BONUS_NAME	=	checker
 #------------------------------------------------------------#
 
-OBJS_DIR			=	objects
+OBJS_DIR	=	objects
 
 LIBFT		=	./libft/libftprintf.a
 
 CFLAGS		=	-g -I./ -Wall -Wextra
 
-VPATH				=	./src \
-						./src/error \
-						./src/list \
-						./src/utils \
-						./src/instructions \
-						./src/algo \
-						./src/algo/util \
-						./src/algo/double_solver \
-						./src/algo/push_rotate \
-						./bonus_src \
-						./bonus_src/others \
-						./bonus_src/utils \
+VPATH		=	./src \
+				./src/error \
+				./src/list \
+				./src/utils \
+				./src/instructions \
+				./src/algo \
+				./src/algo/util \
+				./src/algo/double_solver \
+				./src/algo/push_rotate \
+				./bonus_src \
+				./bonus_src/others \
+				./bonus_src/utils \
 
 
 CC					=	cc

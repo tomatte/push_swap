@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 20:56:55 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 10:37:51 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:34:06 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,12 +21,31 @@ static void	print_codes(char *codes)
 	ft_printf("\n");
 }
 
+static void	bprint_lst(t_lst *lst)
+{
+	if (!lst)
+		ft_printf("Empty List\n");
+	lst = lst_first(lst);
+	while (lst)
+	{
+		ft_printf("%d\t(%d)\n", lst->num, lst->index);
+		lst = lst->next;
+	}
+	ft_printf("\n");
+}
+
+
 int	main(int argc, char *argv[])
 {
-	char	*codes;
+	t_lst	*stack_a;
+	char	*instruction_codes;
 
-	codes = read_instructions();
+	error_management(argc, argv);
+	instruction_codes = read_instructions();
+	stack_a = get_numbers(argc, argv);
+	execute_instructions(stack_a, instruction_codes);
 	print_codes(codes);
+	bprint_lst(stack_a);
 	return (0);
 }
 

@@ -6,13 +6,14 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 21:07:56 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 10:22:41 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 13:28:00 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef CHECKER_H
 # define CHECKER_H
 # include "../libft/libftprintf.h"
+# include "../src/push_swap.h"
 # include <unistd.h>
 # define SA 11
 # define SB 21
