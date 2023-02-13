@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/11 21:39:26 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 10:20:00 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,7 +74,9 @@ NAME		=	push_swap
 
 
 #------------------------ CHECKER ----------------------------#
-BONUS_SRC	=	checker.c
+BONUS_SRC	=	checker.c \
+				read_instructions.c \
+				is_str_equal.c \
 
 BONUS_OBJS			=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
 
@@ -97,6 +99,8 @@ VPATH				=	./src \
 						./src/algo/double_solver \
 						./src/algo/push_rotate \
 						./bonus_src \
+						./bonus_src/others \
+						./bonus_src/utils \
 
 
 CC					=	cc
@@ -131,4 +135,5 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY:	all clean fclean re
+
+.PHONY:	all clean fclean re test
