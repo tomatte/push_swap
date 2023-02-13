@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 13:32:08 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 13:48:58 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,7 @@ NAME		=	push_swap
 BONUS_SRC	=	checker.c \
 				read_instructions.c \
 				is_str_equal.c \
+				execute_instructions.c \
 				die.c \
 				check_numbers.c \
 				error_management.c \
@@ -94,6 +95,10 @@ BONUS_SRC	=	checker.c \
 				lst_remove_first.c \
 				lst_add_front.c \
 				lst_remove_last.c \
+				swap.c \
+				push.c \
+				rotate.c \
+				reverse_rotate.c \
 
 BONUS_OBJS	=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
 
