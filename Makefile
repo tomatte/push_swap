@@ -6,18 +6,12 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 14:08:00 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 20:21:30 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#------------------------ PUSH_SWAP ----------------------------
-SRC			=	push_swap.c \
-				die.c \
-				check_numbers.c \
-				error_management.c \
-				check_duplicated_values.c \
-				check_numbers_size.c \
-				lst_new.c \
+	
+COMMON_SRC	=	lst_new.c \
 				lst_size.c \
 				lst_first.c \
 				lst_last.c \
@@ -28,34 +22,33 @@ SRC			=	push_swap.c \
 				lst_remove_first.c \
 				lst_add_front.c \
 				lst_remove_last.c \
+				die.c \
+				check_numbers.c \
+				error_management.c \
+				check_duplicated_values.c \
+				check_numbers_size.c \
 				get_numbers.c \
-				fill_lst_index.c \
-				print_lst.c \
-				get_position.c \
 				swap.c \
 				push.c \
 				rotate.c \
 				reverse_rotate.c \
+				is_lst_sorted.c \
+				fill_lst_index.c \
+				print_lst.c \
+
+#------------------------ PUSH_SWAP ----------------------------
+SRC			=	push_swap.c \
+				get_position.c \
 				sort.c \
 				two_solver.c \
 				three_solver.c \
-				is_lst_sorted.c \
 				sort_verification.c \
 				radix.c \
 				move_to_top.c \
-				four_solver.c \
-				five_solver.c \
-				double_solver.c \
-				twister_move.c \
-				solve_a.c \
-				solve_b.c \
 				array_move_to_top_a.c \
 				array_move_to_top_b.c \
 				move_to_top_b.c \
-				add_instruction.c \
 				move_to_top_a.c \
-				simple_merge.c \
-				print_instructions.c \
 				push_rotate.c \
 				get_top_index.c \
 				fill_updown_strategy.c \
@@ -64,10 +57,11 @@ SRC			=	push_swap.c \
 				fill_rotate_strategy.c \
 				fill_reverse_strategy.c \
 				execute_strategy.c \
-				push_rotate_algorithm.c
+				push_rotate_algorithm.c \
+				add_instruction.c \
 
 
-OBJS				=	$(patsubst %.c,objects/%.o, $(SRC))
+OBJS				=	$(patsubst %.c,objects/%.o, $(SRC) $(COMMON_SRC))
 
 NAME		=	push_swap
 #------------------------------------------------------------#
@@ -78,32 +72,8 @@ BONUS_SRC	=	checker.c \
 				read_instructions.c \
 				is_str_equal.c \
 				execute_instructions.c \
-				die.c \
-				check_numbers.c \
-				error_management.c \
-				check_duplicated_values.c \
-				check_numbers_size.c \
-				get_numbers.c \
-				lst_new.c \
-				lst_size.c \
-				lst_first.c \
-				lst_last.c \
-				lst_push.c \
-				lst_clear.c \
-				lst_find_by_num.c \
-				lst_find_by_index.c \
-				lst_remove_first.c \
-				lst_add_front.c \
-				lst_remove_last.c \
-				swap.c \
-				push.c \
-				rotate.c \
-				reverse_rotate.c \
-				is_lst_sorted.c \
-				fill_lst_index.c \
-				print_lst.c \
 
-BONUS_OBJS	=	$(patsubst %.c,objects/%.o, $(BONUS_SRC))
+BONUS_OBJS	=	$(patsubst %.c,objects/%.o, $(BONUS_SRC) $(COMMON_SRC))
 
 BONUS_NAME	=	checker
 #------------------------------------------------------------#
@@ -121,7 +91,6 @@ VPATH		=	./src \
 				./src/instructions \
 				./src/algo \
 				./src/algo/util \
-				./src/algo/double_solver \
 				./src/algo/push_rotate \
 				./bonus_src \
 				./bonus_src/others \
@@ -156,9 +125,9 @@ clean:
 
 fclean:	clean
 	rm -f ${NAME}
+	rm -f ${BONUS_NAME}
 	make -C ./libft fclean
 
 re: fclean all
-
 
 .PHONY:	all clean fclean re test

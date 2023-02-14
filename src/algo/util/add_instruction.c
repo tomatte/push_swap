@@ -1,26 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   four_solver.c                                      :+:      :+:    :+:   */
+/*   add_instruction.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/28 21:41:17 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/01/31 09:59:30 by dbrandao         ###   ########.fr       */
+/*   Created: 2023/01/30 14:15:44 by dbrandao          #+#    #+#             */
+/*   Updated: 2023/02/13 20:19:13 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../push_swap.h"
+#include "../../push_swap.h"
 
-void	four_solver(t_lst *a)
+void	add_instruction(char **array, char instruction)
 {
-	t_lst	*b;
-
-	b = NULL;
-	move_to_top(&a, 0);
-	pb(&b, &a);
-	fill_lst_index(a);
-	three_solver(a);
-	pa(&a, &b);
-	fill_lst_index(a);
+	ft_str_push_char(array, instruction);
 }

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 20:56:55 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 14:10:37 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 19:48:11 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,27 +21,14 @@ static void	print_codes(char *codes)
 	ft_printf("\n");
 }
 
-static void	bprint_lst(t_lst *lst)
-{
-	if (!lst)
-		ft_printf("Empty List\n");
-	lst = lst_first(lst);
-	while (lst)
-	{
-		ft_printf("%d\t(%d)\n", lst->num, lst->index);
-		lst = lst->next;
-	}
-	ft_printf("\n");
-}
-
 static void	verify_sort(t_lst *stack_a, t_lst *stack_b)
 {
 	if (stack_b != NULL)
-		ft_printf("KO!\n");
+		ft_printf("KO\n");
 	else if (is_lst_sorted(stack_a))
-		ft_printf("OK!\n");
+		ft_printf("OK\n");
 	else
-		ft_printf("KO!n");
+		ft_printf("KO\n");
 }
 
 int	main(int argc, char *argv[])

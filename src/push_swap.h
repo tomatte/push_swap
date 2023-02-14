@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/09 14:26:48 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 20:19:40 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -107,24 +107,14 @@ void	rrr(t_lst **a, t_lst **b);
 void	sort(t_lst *a);
 void	two_solver(t_lst *a);
 void	three_solver(t_lst *a);
-void	four_solver(t_lst *a);
-void	five_solver(t_lst *a);
 void	radix(t_lst *a);
 
 //double_solver
-void	double_solver(t_lst *a);
-void	twister_move(t_lst **a, char **instructions);
-void	solve_a(t_lst **a, char **instructions);
-void	solve_b(t_lst **b, char **instructions);
 void	move_to_top(t_lst **stack, int index);
 void	move_to_top_a(t_lst **stack, int index);
 void	move_to_top_b(t_lst **stack, int index);
 void	array_move_to_top_a(t_lst **stack, int index, char **instructions);
 void	array_move_to_top_b(t_lst **stack, int index, char **instructions);
-void	add_instruction(char **array, char instruction);
-void	print_instructions_code(char *arr);
-char	*simple_merge(char *a, char *b);
-void	print_instructions(char *b_pushs, char *merge, char *a_pushs);
 
 //push_rotate
 void	push_rotate(t_lst *a);
@@ -135,6 +125,7 @@ void	fill_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	fill_rotate_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	fill_reverse_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	execute_strategy(t_lst **a, t_lst **b, t_strategy *strategy);
+void	add_instruction(char **array, char instruction);
 
 //temp
 void	print_lst(t_lst *lst);
