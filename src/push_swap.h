@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 13:22:27 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 20:19:40 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 22:37:51 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -109,13 +109,6 @@ void	two_solver(t_lst *a);
 void	three_solver(t_lst *a);
 void	radix(t_lst *a);
 
-//double_solver
-void	move_to_top(t_lst **stack, int index);
-void	move_to_top_a(t_lst **stack, int index);
-void	move_to_top_b(t_lst **stack, int index);
-void	array_move_to_top_a(t_lst **stack, int index, char **instructions);
-void	array_move_to_top_b(t_lst **stack, int index, char **instructions);
-
 //push_rotate
 void	push_rotate(t_lst *a);
 void	push_rotate_algorithm(t_lst **a, t_lst **b, t_strategy *strategy);
@@ -126,6 +119,8 @@ void	fill_rotate_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	fill_reverse_strategy(t_lst *a, t_lst *b, t_strategy *strategy);
 void	execute_strategy(t_lst **a, t_lst **b, t_strategy *strategy);
 void	add_instruction(char **array, char instruction);
+void	move_to_top_a(t_lst **stack, int index);
+void	move_to_top_b(t_lst **stack, int index);
 
 //temp
 void	print_lst(t_lst *lst);
