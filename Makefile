@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 22:46:16 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/14 13:28:50 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,7 +24,6 @@ COMMON_SRC	=	lst_new.c \
 				lst_remove_last.c \
 				die.c \
 				check_numbers.c \
-				error_management.c \
 				check_duplicated_values.c \
 				check_numbers_size.c \
 				get_numbers.c \
@@ -34,6 +33,10 @@ COMMON_SRC	=	lst_new.c \
 				reverse_rotate.c \
 				is_lst_sorted.c \
 				fill_lst_index.c \
+
+OBJS_DIR_COMMON	= common_objs
+
+OBJS_COMMON		=	$(patsubst %.c,$(OBJS_DIR_COMMON)/%.o, $(COMMON_SRC))
 
 #------------------------ PUSH_SWAP ----------------------------
 SRC			=	push_swap.c \
@@ -54,11 +57,13 @@ SRC			=	push_swap.c \
 				execute_strategy.c \
 				push_rotate_algorithm.c \
 				add_instruction.c \
-
-
-OBJS				=	$(patsubst %.c,objects/%.o, $(SRC) $(COMMON_SRC))
+				error_management.c \
 
 NAME		=	push_swap
+
+OBJS_DIR_PUSH	=	objects_push
+
+OBJS_PUSH			=	$(patsubst %.c,$(OBJS_DIR_PUSH)/%.o, $(SRC))
 #------------------------------------------------------------#
 
 
@@ -67,17 +72,18 @@ BONUS_SRC	=	checker.c \
 				read_instructions.c \
 				is_str_equal.c \
 				execute_instructions.c \
-
-BONUS_OBJS	=	$(patsubst %.c,objects/%.o, $(BONUS_SRC) $(COMMON_SRC))
+				error_management_checker.c \
 
 BONUS_NAME	=	checker
-#------------------------------------------------------------#
 
-OBJS_DIR	=	objects
+OBJS_DIR_CHECKER	=	objects_checker
+
+OBJS_BONUS	=	$(patsubst %.c,$(OBJS_DIR_CHECKER)/%.o, $(BONUS_SRC))
+#------------------------------------------------------------#
 
 LIBFT		=	./libft/libftprintf.a
 
-CFLAGS		=	-g -I./ -Wall -Wextra
+CFLAGS		=	-g -I./ -Wall -Wextra -Werror
 
 VPATH		=	./src \
 				./src/error \
@@ -94,28 +100,39 @@ VPATH		=	./src \
 
 CC					=	cc
 
-$(OBJS_DIR)/%.o:	%.c
+$(OBJS_DIR_COMMON)/%.o:	%.c
+							$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJS_DIR_PUSH)/%.o:	%.c
+							$(CC) $(CFLAGS) -c $< -o $@
+
+$(OBJS_DIR_CHECKER)/%.o:	%.c
 							$(CC) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 bonus:	$(BONUS_NAME)
 
-$(OBJS_DIR):
+$(OBJS_DIR_COMMON):
 						mkdir -p $@
 
-$(NAME): $(OBJS_DIR) $(OBJS) $(LIBFT)
-	$(CC) ${OBJS} ${CFLAGS} ${LIBFT} -o $@
+$(OBJS_DIR_PUSH):
+						mkdir -p $@
 
-$(BONUS_NAME): $(OBJS_DIR) $(BONUS_OBJS) $(LIBFT)
-	$(CC) ${BONUS_OBJS} ${CFLAGS} ${LIBFT} -o $@
-	
+$(OBJS_DIR_CHECKER):
+						mkdir -p $@
+
+$(NAME): $(OBJS_DIR_PUSH) $(OBJS_DIR_COMMON) $(OBJS_PUSH) $(OBJS_COMMON) $(LIBFT)
+	$(CC) $(OBJS_PUSH) $(OBJS_COMMON) ${CFLAGS} ${LIBFT} -o $@
+
+$(BONUS_NAME): $(OBJS_DIR_COMMON) $(OBJS_DIR_CHECKER) $(OBJS_BONUS) $(OBJS_COMMON) $(LIBFT)
+	$(CC) ${OBJS_BONUS} $(OBJS_COMMON)  ${CFLAGS} ${LIBFT} -o $@
 
 $(LIBFT):
 	make -C ./libft bonus
 
 clean:
-	rm -rf ${OBJS_DIR}
+	rm -rf ${OBJS_DIR_COMMON} ${OBJS_DIR_PUSH} ${OBJS_DIR_CHECKER}
 	make -C ./libft clean
 
 fclean:	clean
@@ -125,4 +142,4 @@ fclean:	clean
 
 re: fclean all
 
-.PHONY:	all clean fclean re test
+.PHONY:	all clean fclean re bonus

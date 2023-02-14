@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 20:56:55 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 22:43:38 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/14 09:11:12 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	main(int argc, char *argv[])
 	t_lst	*stack_b;
 	char	*instruction_codes;
 
-	error_management(argc, argv);
+	error_management_checker(argc, argv);
 	instruction_codes = read_instructions();
 	stack_a = get_numbers(argc, argv);
 	fill_lst_index(stack_a);
