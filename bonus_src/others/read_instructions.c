@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 08:17:59 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 22:46:48 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:46:03 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,11 +48,18 @@ static void	error_exit(void *mem, char *msg)
 	exit(0);
 }
 
+static void	free_instruction(char *instruction)
+{
+	if (instruction)
+		free(instruction);
+}
+
 static void	add_to_code_array(char **code_array, char *instruction)
 {
 	char	code;
 
 	code = get_instruction_code(instruction);
+	free_instruction(instruction);
 	if (!code)
 		error_exit(*code_array, "Error");
 	ft_str_push_char(code_array, code);

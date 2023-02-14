@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/11 20:56:55 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/14 09:11:12 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/14 14:43:02 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,12 @@ static void	verify_sort(t_lst *stack_a, t_lst *stack_b)
 		ft_printf("KO\n");
 }
 
+static void	clear_memory(t_lst *stack, char *codes)
+{
+	lst_clear(stack);
+	free(codes);
+}
+
 int	main(int argc, char *argv[])
 {
 	t_lst	*stack_a;
@@ -34,6 +40,6 @@ int	main(int argc, char *argv[])
 	fill_lst_index(stack_a);
 	execute_instructions(&stack_a, &stack_b, instruction_codes);
 	verify_sort(stack_a, stack_b);
-	lst_clear(stack_a);
+	clear_memory(stack_a, instruction_codes);
 	return (0);
 }
