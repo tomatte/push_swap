@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 22:38:04 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 22:39:54 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -43,7 +43,6 @@ SRC			=	push_swap.c \
 				two_solver.c \
 				three_solver.c \
 				sort_verification.c \
-				radix.c \
 				move_to_top_b.c \
 				move_to_top_a.c \
 				push_rotate.c \
