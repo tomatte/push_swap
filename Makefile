@@ -6,7 +6,7 @@
 #    By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/12/23 13:21:58 by dbrandao          #+#    #+#              #
-#    Updated: 2023/02/13 22:39:54 by dbrandao         ###   ########.fr        #
+#    Updated: 2023/02/13 22:46:16 by dbrandao         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,7 +34,6 @@ COMMON_SRC	=	lst_new.c \
 				reverse_rotate.c \
 				is_lst_sorted.c \
 				fill_lst_index.c \
-				print_lst.c \
 
 #------------------------ PUSH_SWAP ----------------------------
 SRC			=	push_swap.c \

@@ -6,7 +6,7 @@
 /*   By: dbrandao <dbrandao@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/12 08:17:59 by dbrandao          #+#    #+#             */
-/*   Updated: 2023/02/13 19:48:24 by dbrandao         ###   ########.fr       */
+/*   Updated: 2023/02/13 22:46:48 by dbrandao         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,16 +57,6 @@ static void	add_to_code_array(char **code_array, char *instruction)
 		error_exit(*code_array, "Error");
 	ft_str_push_char(code_array, code);
 }
-
-static void	print_codes(char *codes)
-{
-	if (!codes)
-		return ;
-	while (*codes)
-		ft_printf("%d ", *codes++);
-	ft_printf("\n");
-}
-
 
 char	*read_instructions(void)
 {
